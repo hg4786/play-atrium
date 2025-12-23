@@ -421,22 +421,24 @@ export default function Index() {
         <div className="max-w-[1825px] mx-auto">
           {/* Mobile View with Carousel */}
           <div className="lg:hidden">
-            <div className="px-4 mb-6 space-y-3">
-              <p className="text-[#55613B] text-sm font-medium text-center">
-                OPEN PLAY
-              </p>
-              <h2
-                className="font-fredoka text-2xl text-golden tracking-[1.44px] text-center"
-                style={{ WebkitTextStroke: "3px #56623C" }}
-              >
-                Play Day Passes
-              </h2>
-              <p className="text-[#333333] text-sm font-light leading-7 text-center max-w-[372px] mx-auto">
-                Bring your kids to explore 4,000 sq ft of safe, exciting play
-                zones. Perfect for playdates, rainy days, or spontaneous
-                adventures.
-              </p>
-            </div>
+            <ScrollAnimation variant="fadeUp">
+              <div className="px-4 mb-6 space-y-3">
+                <p className="text-[#55613B] text-sm font-medium text-center">
+                  OPEN PLAY
+                </p>
+                <h2
+                  className="font-fredoka text-2xl text-golden tracking-[1.44px] text-center"
+                  style={{ WebkitTextStroke: "3px #56623C" }}
+                >
+                  Play Day Passes
+                </h2>
+                <p className="text-[#333333] text-sm font-light leading-7 text-center max-w-[372px] mx-auto">
+                  Bring your kids to explore 4,000 sq ft of safe, exciting play
+                  zones. Perfect for playdates, rainy days, or spontaneous
+                  adventures.
+                </p>
+              </div>
+            </ScrollAnimation>
 
             <Carousel opts={{ align: "center", loop: true }} className="w-full">
               <CarouselContent className="-ml-0">

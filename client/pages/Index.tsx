@@ -459,34 +459,36 @@ export default function Index() {
           {/* Desktop View */}
           <div className="hidden lg:grid grid-cols-[468px_1fr] gap-8 lg:gap-14 items-start">
             {/* Left: Dark Box */}
-            <div className="bg-[#54643D] p-8 md:p-10 lg:p-12 flex flex-col items-center justify-center text-center space-y-10 lg:space-y-12 h-full">
-              <div className="space-y-3">
-                <h3 className="font-poppins text-white text-4xl md:text-5xl font-medium">
-                  We are
-                </h3>
-                <h2 className="font-playball text-beige text-6xl md:text-7xl lg:text-[93px] leading-tight">
-                  Socks only
-                </h2>
-                <h3 className="font-poppins text-white text-4xl md:text-5xl font-medium">
-                  Facility
-                </h3>
-              </div>
-
-              <div className="w-full max-w-[369px]">
-                <div className="aspect-square rounded-full overflow-hidden border-[9px] border-beige">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/f3f725645dd8f97dc7c73020a6adca7024c2ca90?width=960"
-                    alt="Socks required"
-                    className="w-full h-full object-cover"
-                  />
+            <ScrollAnimation variant="fadeLeft">
+              <div className="bg-[#54643D] p-8 md:p-10 lg:p-12 flex flex-col items-center justify-center text-center space-y-10 lg:space-y-12 h-full">
+                <div className="space-y-3">
+                  <h3 className="font-poppins text-white text-4xl md:text-5xl font-medium">
+                    We are
+                  </h3>
+                  <h2 className="font-playball text-beige text-6xl md:text-7xl lg:text-[93px] leading-tight">
+                    Socks only
+                  </h2>
+                  <h3 className="font-poppins text-white text-4xl md:text-5xl font-medium">
+                    Facility
+                  </h3>
                 </div>
-              </div>
 
-              <p className="text-white text-lg md:text-xl font-quicksand max-w-[405px] leading-[35px]">
-                All adults and children must wear socks. We sell socks in case
-                you forget to bring them.
-              </p>
-            </div>
+                <div className="w-full max-w-[369px]">
+                  <div className="aspect-square rounded-full overflow-hidden border-[9px] border-beige">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/f3f725645dd8f97dc7c73020a6adca7024c2ca90?width=960"
+                      alt="Socks required"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                <p className="text-white text-lg md:text-xl font-quicksand max-w-[405px] leading-[35px]">
+                  All adults and children must wear socks. We sell socks in case
+                  you forget to bring them.
+                </p>
+              </div>
+            </ScrollAnimation>
 
             {/* Right: Play Day Passes */}
             <ScrollAnimation variant="slideUp">

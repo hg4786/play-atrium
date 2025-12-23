@@ -875,7 +875,11 @@ export default function Index() {
                 </p>
               </div>
 
-              <div className="flex flex-col items-center max-w-[787px] space-y-6">
+              <div className="flex flex-col items-center max-w-[787px] space-y-4 xl:space-y-6">
+                <p className="text-white text-6xl xl:text-7xl font-light leading-none font-inter">
+                  99
+                </p>
+
                 <svg
                   className="w-[83px] h-[83px] text-[#F4E9CD]"
                   viewBox="0 0 83 83"

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Star, Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import {
   Carousel,
   CarouselContent,
@@ -8,6 +9,58 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+
+// Reusable scroll animation component
+function ScrollAnimation({
+  children,
+  variant = "fadeUp",
+  delay = 0,
+}: {
+  children: React.ReactNode;
+  variant?: "fadeUp" | "fadeLeft" | "fadeRight" | "scale" | "slideUp";
+  delay?: number;
+}) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "0px 0px -100px 0px" });
+
+  const variants = {
+    fadeUp: {
+      hidden: { opacity: 0, y: 40 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay } },
+    },
+    fadeLeft: {
+      hidden: { opacity: 0, x: -40 },
+      visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay } },
+    },
+    fadeRight: {
+      hidden: { opacity: 0, x: 40 },
+      visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay } },
+    },
+    scale: {
+      hidden: { opacity: 0, scale: 0.9 },
+      visible: { opacity: 1, scale: 1, transition: { duration: 0.6, delay } },
+    },
+    slideUp: {
+      hidden: { opacity: 0, y: 60 },
+      visible: {
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.7, ease: "easeOut", delay },
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={variants[variant]}
+    >
+      {children}
+    </motion.div>
+  );
+}
 
 export default function Index() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

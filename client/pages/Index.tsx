@@ -489,53 +489,55 @@ export default function Index() {
             </div>
 
             {/* Right: Play Day Passes */}
-            <div className="space-y-8 lg:space-y-10">
-              <div className="space-y-4">
-                <p className="text-[#55613B] text-lg md:text-xl font-medium">
-                  OPEN PLAY
-                </p>
-                <h2 className="font-fredoka text-4xl sm:text-5xl md:text-6xl lg:text-[80.9px] text-golden tracking-[0.06em] text-stroke-md leading-tight">
-                  Play Day Passes
-                </h2>
-                <p className="text-[#333333] text-lg md:text-xl font-light leading-[35px] max-w-[800px]">
-                  Bring your kids to explore 4,000 sq ft of safe, exciting play
-                  zones. Perfect for playdates, rainy days, or spontaneous
-                  adventures.
-                </p>
-              </div>
-
-              <div className="grid lg:grid-cols-[535px_1fr] gap-8 items-start">
-                <div className="space-y-8 lg:space-y-12">
-                  <div className="space-y-4">
-                    <p className="text-golden text-2xl md:text-[28px] font-poppins font-normal">
-                      Weekday Pass
-                    </p>
-                    <p className="font-poppins text-7xl md:text-8xl lg:text-[113px] text-olive font-medium leading-none">
-                      $14.99
-                    </p>
-                  </div>
-
-                  <div className="space-y-5 lg:space-y-6">
-                    <FeatureItem text="Unlimited playtime" />
-                    <FeatureItem text="Bring your own snacks & drinks" />
-                    <FeatureItem text="Same-day re-entry" />
-                    <FeatureItem text="Siblings 1 & under play free" />
-                  </div>
-
-                  <button className="w-full max-w-[258px] bg-[#54643D] text-beige py-3.5 rounded-full font-poppins font-semibold text-lg tracking-[0.9px] hover:bg-olive transition-colors shadow-md">
-                    BOOK NOW
-                  </button>
+            <ScrollAnimation variant="slideUp">
+              <div className="space-y-8 lg:space-y-10">
+                <div className="space-y-4">
+                  <p className="text-[#55613B] text-lg md:text-xl font-medium">
+                    OPEN PLAY
+                  </p>
+                  <h2 className="font-fredoka text-4xl sm:text-5xl md:text-6xl lg:text-[80.9px] text-golden tracking-[0.06em] text-stroke-md leading-tight">
+                    Play Day Passes
+                  </h2>
+                  <p className="text-[#333333] text-lg md:text-xl font-light leading-[35px] max-w-[800px]">
+                    Bring your kids to explore 4,000 sq ft of safe, exciting play
+                    zones. Perfect for playdates, rainy days, or spontaneous
+                    adventures.
+                  </p>
                 </div>
 
-                <div className="hidden lg:block">
-                  <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/bd30a3757d11092698a6e0e041a5eeea4d400d70?width=3404"
-                    alt="Play area"
-                    className="w-full max-w-[598px] h-auto aspect-[598/707] object-cover rounded-2xl"
-                  />
+                <div className="grid lg:grid-cols-[535px_1fr] gap-8 items-start">
+                  <div className="space-y-8 lg:space-y-12">
+                    <div className="space-y-4">
+                      <p className="text-golden text-2xl md:text-[28px] font-poppins font-normal">
+                        Weekday Pass
+                      </p>
+                      <p className="font-poppins text-7xl md:text-8xl lg:text-[113px] text-olive font-medium leading-none">
+                        $14.99
+                      </p>
+                    </div>
+
+                    <div className="space-y-5 lg:space-y-6">
+                      <FeatureItem text="Unlimited playtime" />
+                      <FeatureItem text="Bring your own snacks & drinks" />
+                      <FeatureItem text="Same-day re-entry" />
+                      <FeatureItem text="Siblings 1 & under play free" />
+                    </div>
+
+                    <button className="w-full max-w-[258px] bg-[#54643D] text-beige py-3.5 rounded-full font-poppins font-semibold text-lg tracking-[0.9px] hover:bg-olive transition-colors shadow-md">
+                      BOOK NOW
+                    </button>
+                  </div>
+
+                  <div className="hidden lg:block">
+                    <img
+                      src="https://api.builder.io/api/v1/image/assets/TEMP/bd30a3757d11092698a6e0e041a5eeea4d400d70?width=3404"
+                      alt="Play area"
+                      className="w-full max-w-[598px] h-auto aspect-[598/707] object-cover rounded-2xl"
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </section>

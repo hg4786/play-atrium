@@ -100,7 +100,7 @@ export function AboutSection() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="border border-white text-white px-[114px] md:px-11 py-3.5 rounded-full font-inter font-semibold text-xs md:text-lg tracking-[0.9px] hover:bg-white hover:text-olive transition-colors shadow-md"
+                  className="border border-white text-white sm:px-[114px] md:px-11 py-3.5 rounded-full font-inter font-semibold text-xs md:text-lg tracking-[0.9px] hover:bg-white hover:text-olive transition-colors shadow-md"
                 >
                   Get a Day Pass
                 </motion.button>

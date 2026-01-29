@@ -35,7 +35,7 @@ export function TestimonialsSection() {
 
           <Carousel
             opts={{ align: "center", loop: true }}
-            className="w-full max-w-[362px]"
+            className="w-full max-w-[362px] pb-16"
           >
             <CarouselContent className="-ml-0">
               <CarouselItem className="pl-0">

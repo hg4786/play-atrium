@@ -8,10 +8,10 @@ export function AboutSection() {
       className="bg-olive py-12 md:py-20 lg:py-24 px-6 lg:px-20"
     >
       <div className="max-w-[1704px] mx-auto">
-        <div className="grid lg:grid-cols-[362px_1fr_366px] gap-6 lg:gap-8 xl:gap-12 items-center">
+        <div className="grid 2xl:grid-cols-[362px_1fr_366px] gap-6 lg:gap-8 xl:gap-12 items-center">
           {/* Left: Images - Desktop only */}
           <ScrollAnimation variant="fadeLeft">
-            <div className="hidden lg:block relative">
+            <div className="hidden 2xl:block relative">
               <div className="space-y-6">
                 <motion.img
                   whileHover={{ scale: 1.05, rotate: 2 }}
@@ -35,14 +35,14 @@ export function AboutSection() {
           <ScrollAnimation variant="slideUp">
             <div className="space-y-6 md:space-y-8 lg:space-y-12">
               <h2
-                className="font-fredoka text-2xl md:text-4xl lg:text-5xl text-olive text-center leading-tight lg:leading-tight tracking-wider lg:tracking-widest"
+                className="font-fredoka text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-olive text-center leading-tight lg:leading-tight tracking-wider lg:tracking-widest"
                 style={{ WebkitTextStroke: "3px #F4E9CD" }}
               >
                 Where Play, Imagination & Family Fun Come to Life.
               </h2>
 
               {/* Mobile Images */}
-              <div className="lg:hidden grid grid-cols-2 gap-0.5">
+              <div className="2xl:hidden grid grid-cols-2 gap-0.5">
                 <motion.img
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -110,7 +110,7 @@ export function AboutSection() {
 
           {/* Right: Images - Desktop only */}
           <ScrollAnimation variant="fadeRight">
-            <div className="hidden lg:block relative">
+            <div className="hidden 2xl:block relative">
               <div className="space-y-6">
                 <motion.img
                   whileHover={{ scale: 1.05, rotate: -2 }}

@@ -23,9 +23,7 @@ export function PlayDayPassesSection() {
                 Play Day Passes
               </h2>
               <p className="text-[#333333] text-sm font-light leading-normal text-center max-w-[372px] mx-auto">
-                Bring your kids to explore 4,000 sq ft of safe, exciting play
-                zones. Perfect for playdates, rainy days, or spontaneous
-                adventures.
+                Bring your kids to explore 2,000 sq ft of safe, exciting play zones. Perfect for playdates, rainy days, or spontaneous adventures.
               </p>
             </div>
           </ScrollAnimation>
@@ -121,9 +119,7 @@ export function PlayDayPassesSection() {
                   Play Day Passes
                 </h2>
                 <p className="text-[#333333] text-lg md:text-xl font-light leading-[35px] max-w-[800px]">
-                  Bring your kids to explore 4,000 sq ft of safe, exciting play
-                  zones. Perfect for playdates, rainy days, or spontaneous
-                  adventures.
+                  Bring your kids to explore 2,000 sq ft of safe, exciting play zones. Perfect for playdates, rainy days, or spontaneous adventures.
                 </p>
               </div>
 
@@ -139,7 +135,7 @@ export function PlayDayPassesSection() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, type: "spring", bounce: 0.6 }}
                       className="font-fredoka font-extrabold text-5xl lg:text-[70px] text-golden tracking-normal"
-                      style={{ WebkitTextStroke: "1px #56623C" }}>$14.99
+                      style={{ WebkitTextStroke: "1px #56623C" }}>$15.99
                     </motion.p>
                   </div>
 

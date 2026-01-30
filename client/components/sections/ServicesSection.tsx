@@ -15,10 +15,10 @@ export function ServicesSection() {
         <ScrollAnimation variant="bounce">
           <div className="text-center mb-6 md:mb-12">
             <h2
-              className="font-fredoka text-2xl md:text-5xl lg:text-[64px] text-[#FFBC56] text-center leading-tight tracking-[1.44px] lg:tracking-[3.84px] mb-3 md:mb-6"
+              className="font-fredoka font-bold text-2xl md:text-5xl lg:text-[64px] text-[#FFBC56] text-center leading-normal tracking-[1.44px] lg:tracking-normal mb-3 md:mb-6"
               style={{
                 WebkitTextStroke: "3px #56623C",
-                WebkitTextStrokeWidth: window.innerWidth >= 768 ? "3px" : "3px",
+                WebkitTextStrokeWidth: window.innerWidth >= 768 ? "3px" : "1px",
               }}
             >
               Our Awesome Services For

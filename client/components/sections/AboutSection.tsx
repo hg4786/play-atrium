@@ -35,8 +35,8 @@ export function AboutSection() {
           <ScrollAnimation variant="slideUp">
             <div className="space-y-6 md:space-y-8 lg:space-y-12">
               <h2
-                className="font-fredoka text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-olive text-center leading-tight lg:leading-tight tracking-wider lg:tracking-widest"
-                style={{ WebkitTextStroke: "3px #F4E9CD" }}
+                className="font-fredoka font-bold text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-olive text-center leading-tight lg:leading-tight tracking-wider lg:tracking-widest"
+                style={{ WebkitTextStroke: "0.5px #F4E9CD" }}
               >
                 Where Play, Imagination & Family Fun Come to Life.
               </h2>
@@ -65,18 +65,11 @@ export function AboutSection() {
 
               <div className="space-y-6 max-w-[838px] mx-auto">
                 <p className="text-white text-center text-sm md:text-xl leading-7 md:leading-[35px]">
-                  <span className="font-light">
-                    The Play Atrium was created with one goal in mind: to give
-                    families a safe, clean, and joyful place to play, connect,
-                    and celebrate together. With{" "}
-                  </span>
-                  <span className="font-semibold">
-                    4,000 sq ft of open play space, modern equipment, and a
-                    warm, welcoming atmosphere
-                  </span>
-                  <span className="font-light">
-                    , we're dedicated to making every visit feel special.
-                  </span>
+                  The Play Atrium was created with one goal in mind: to give
+                  families a safe, clean, and joyful place to play, connect,
+                  and celebrate together. With 4,000 sq ft of open play space,
+                  modern equipment, and a warm, welcoming atmosphere, we're
+                  dedicated to making every visit feel special.
                 </p>
 
                 <p className="text-white text-center text-sm md:text-xl font-light leading-7 md:leading-[35px]">

@@ -30,11 +30,11 @@ export function Footer() {
                                 Hours
                             </h4>
                             <div className="text-black text-base md:text-lg space-y-1">
-                                <p>Monday - Saturday</p>
-                                <p>6:00 am - 8:00 pm</p>
-                                <p>Sunday - Closed *</p>
+                                <p>Monday - Friday : 10:00 am - 6:00 pm</p>
+                                <p>Saturday : 9:00 Am - 6:00 Pm</p>
+                                <p>Sunday : 10:00 AM - 5:00 PM</p>
                                 <p className="text-gray-500 text-sm mt-2">
-                                    * Full Facility Rental Only Available
+                                    * Full Facility Rental Available
                                 </p>
                             </div>
                         </div>
@@ -46,12 +46,12 @@ export function Footer() {
                                 Address & Contact Info
                             </h4>
                             <a
-                                href="#"
+                                href="https://maps.app.goo.gl/g8QxNj3HQzpDiowU6"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-black text-sm md:text-md underline hover:text-olive transition-colors block"
                             >
-                                10640 Northwest Fwy, Houston, TX 77092
+                                10640 Northwest<br />Fwy, Houston, TX<br />77092
                             </a>
                         </div>
                     </ScrollAnimation>

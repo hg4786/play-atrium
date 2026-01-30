@@ -22,9 +22,7 @@ export function MembershipSection() {
               Monthly Membership
             </h2>
             <p className="text-black text-sm md:text-xl font-light max-w-[342px] md:max-w-4xl mx-auto leading-7 md:leading-[35px]">
-              From intimate gatherings to grand luxury weddings, we bring
-              together creativity, organization, and passion to design every
-              detail with precision.
+              Our Monthly Memberships make it easy to visit often, save more, and enjoy exclusive perks — all in a fun, welcoming space your family will love.
             </p>
           </div>
         </ScrollAnimation>
@@ -42,7 +40,6 @@ export function MembershipSection() {
                     "1 free weekend visit/month",
                     "10% off party rooms & décor",
                     "Early access to special events",
-                    "Babies 1 & under play free",
                   ]}
                   note="Perfect for families who visit during the week"
                 />
@@ -52,11 +49,10 @@ export function MembershipSection() {
                   title="PLUS"
                   price="$ 49.99"
                   features={[
-                    "Unlimited weekday play",
-                    "1 free weekend visit/month",
+                    "Unlimited play - weekdays and weekends",
+                    "1 free guest pass per month",
                     "10% off party rooms & décor",
-                    "Early access to special events",
-                    "Babies 1 & under play free",
+                    "Early access to events & specials",
                   ]}
                   note="Best Value for frequent players and weekend families"
                 />
@@ -74,9 +70,7 @@ export function MembershipSection() {
               features={[
                 "Unlimited weekday play",
                 "1 free weekend visit/month",
-                "10% off party rooms & décor",
                 "Early access to special events",
-                "Babies 1 & under play free",
               ]}
               note="Perfect for families who visit during the week"
             />
@@ -86,11 +80,10 @@ export function MembershipSection() {
               title="PLUS"
               price="$ 49.99"
               features={[
-                "Unlimited weekday play",
-                "1 free weekend visit/month",
+                "Unlimited play - weekdays and weekends",
+                "1 free guest pass per month",
                 "10% off party rooms & décor",
-                "Early access to special events",
-                "Babies 1 & under play free",
+                "Early access to events & specials",
               ]}
               note="Best Value for frequent players and weekend families"
             />

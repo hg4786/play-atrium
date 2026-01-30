@@ -65,18 +65,11 @@ export function AboutSection() {
 
               <div className="space-y-6 max-w-[838px] mx-auto">
                 <p className="text-white text-center text-sm md:text-xl leading-7 md:leading-[35px]">
-                  The Play Atrium was created with one goal in mind: to give
-                  families a safe, clean, and joyful place to play, connect,
-                  and celebrate together. With 4,000 sq ft of open play space,
-                  modern equipment, and a warm, welcoming atmosphere, we're
-                  dedicated to making every visit feel special.
+                  The Play Atrium was created with one goal in mind: to give families a safe, clean, and joyful place to play, connect, and celebrate together. Located inside a 4,000 sq ft family-friendly facility, featuring approximately 2,000 sq ft of dedicated play areas designed for exploration, creativity, and active fun. we’re dedicated to making every visit feel special.
                 </p>
 
                 <p className="text-white text-center text-sm md:text-xl font-light leading-7 md:leading-[35px]">
-                  Whether you're here for a playdate, a spontaneous afternoon of
-                  fun, or a once-in-a-lifetime celebration, our team works hard
-                  to make sure kids stay active, parents feel at ease, and every
-                  family leaves with big smiles and happy memories.
+                  Whether you’re here for a playdate, a spontaneous afternoon of fun, or a once-in-a-lifetime celebration, our team works hard to make sure kids stay active, parents feel at ease, and every family leaves with big smiles and happy memories.
                 </p>
               </div>
 

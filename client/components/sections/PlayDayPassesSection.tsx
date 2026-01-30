@@ -17,12 +17,12 @@ export function PlayDayPassesSection() {
                 OPEN PLAY
               </p>
               <h2
-                className="font-fredoka text-2xl text-golden tracking-[1.44px] text-center"
-                style={{ WebkitTextStroke: "3px #56623C" }}
+                className="font-fredoka font-bold text-3xl text-golden tracking-normal text-center"
+                style={{ WebkitTextStroke: "0.5px #56623C" }}
               >
                 Play Day Passes
               </h2>
-              <p className="text-[#333333] text-sm font-light leading-7 text-center max-w-[372px] mx-auto">
+              <p className="text-[#333333] text-sm font-light leading-normal text-center max-w-[372px] mx-auto">
                 Bring your kids to explore 4,000 sq ft of safe, exciting play
                 zones. Perfect for playdates, rainy days, or spontaneous
                 adventures.
@@ -138,9 +138,8 @@ export function PlayDayPassesSection() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, type: "spring", bounce: 0.6 }}
-                      className="font-poppins text-7xl md:text-8xl lg:text-[113px] text-olive font-medium leading-none"
-                    >
-                      $14.99
+                      className="font-fredoka font-extrabold text-5xl lg:text-[70px] text-golden tracking-normal"
+                      style={{ WebkitTextStroke: "1px #56623C" }}>$14.99
                     </motion.p>
                   </div>
 

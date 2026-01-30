@@ -10,7 +10,8 @@ export function DayPassCard() {
     >
       <div className="bg-beige border-b border-olive px-6 py-6 text-center">
         <p className="text-golden text-base font-poppins mb-2">Weekday Pass</p>
-        <p className="font-poppins text-[64px] text-olive font-medium leading-none">$14.99</p>
+        <p className="font-fredoka font-extrabold text-5xl text-golden tracking-normal"
+          style={{ WebkitTextStroke: "1px #56623C" }}>$15.99</p>
       </div>
       <div className="px-6 py-6 space-y-4">
         <div className="flex items-start gap-5">

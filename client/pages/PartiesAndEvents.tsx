@@ -32,9 +32,9 @@ export default function PartiesAndEvents() {
                 Private Events & Facility Rentals
               </p>
               <h2
-                className="font-fredoka text-2xl md:text-5xl lg:text-[64px] text-[#FFBC56] text-center leading-tight tracking-[1.44px] lg:tracking-[3.84px] mb-3 md:mb-6"
+                className="font-fredoka font-bold text-2xl md:text-5xl lg:text-[64px] text-[#FFBC56] text-center leading-tight tracking-[1.44px] lg:tracking-[3.84px] mb-3 md:mb-6"
                 style={{
-                  WebkitTextStroke: "3px #56623C",
+                  WebkitTextStroke: "1px #56623C",
                 }}
               >
                 Full Facility Private Rental
@@ -288,7 +288,7 @@ function RentalOptionCardMobile({
     <motion.div
       whileHover={{ scale: 1.03, y: -5 }}
       transition={{ duration: 0.3 }}
-      className="bg-white rounded-2xl shadow-lg px-2 py-4 flex flex-col items-center text-center border-b-8 border-[#54643D]"
+      className="h-full bg-white rounded-2xl shadow-lg px-2 py-4 flex flex-col items-center text-center border-b-8 border-[#54643D]"
     >
       {/* Circular Image */}
       <div className="relative mb-6">
@@ -302,7 +302,7 @@ function RentalOptionCardMobile({
       </div>
 
       {/* Content */}
-      <div className="space-y-3">
+      <div className="space-y-3 flex-1 flex flex-col h-full">
         <h3
           className="font-fredoka text-sm font-medium md:text-xl text-[#56623C] tracking-wider"
           style={{
@@ -311,7 +311,7 @@ function RentalOptionCardMobile({
         >
           {title}
         </h3>
-        <p className="text-[#333333] text-xs font-inter leading-6">{description}</p>
+        <p className="text-[#333333] text-xs font-inter leading-6 h-full">{description}</p>
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

@@ -1,8 +1,10 @@
 import { useMemo, useState } from "react";
+import { useDragToScroll } from "@/hooks/useDragToScroll";
 
 export default function ImageGallery({ categoryImages }: { categoryImages: Record<string, string[]> }) {
 
     const [activeCategory, setActiveCategory] = useState("Birthdays");
+    const { scrollRef, isDragging, handlers } = useDragToScroll();
 
     const categories = useMemo(() => Object.keys(categoryImages), [categoryImages]);
 
@@ -12,7 +14,12 @@ export default function ImageGallery({ categoryImages }: { categoryImages: Recor
         <section className="bg-[#566336] py-8 px-4 font-sans">
             <div className="">
 
-                <div className="flex overflow-x-auto xl:justify-center gap-3 pb-6 no-scrollbar">
+                <div 
+                    ref={scrollRef}
+                    {...handlers}
+                    className={`flex overflow-x-auto xl:justify-center gap-3 pb-6 no-scrollbar ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+                    style={{ userSelect: isDragging ? 'none' : 'auto' }}
+                >
                     {categories.map((cat, idx) => (
                         <button
                             key={idx}

@@ -83,7 +83,7 @@ export function PartyPackageComparisonSection() {
 
         {/* Desktop View - 3 Column Grid */}
         {/* <div className="hidden lg:grid lg:grid-cols-3 gap-6 xl:gap-8 mb-12"> */}
-        <div className="hidden lg:flex justify-center gap-0 mb-12">
+        <div className="hidden lg:flex justify-center gap-0 mb-12 bg-beige pt-5">
           {packages.map((pkg, index) => (
             <ScrollAnimation key={index} variant="zoomIn" delay={index * 0.1}>
               <PackageCard {...pkg} />

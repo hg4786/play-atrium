@@ -70,40 +70,40 @@ export function Navbar() {
             <Link
               to="/parties-events"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "3px #56623C" }}
+              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #56623C" }}
             >
               Parties & Events
             </Link>
             <Link
               to="/aboutus"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "3px #56623C" }}
+              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #56623C" }}
             >
               About Us
             </Link>
             <Link
               to="/custom-decorations"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "3px #56623C" }}
+              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #56623C" }}
             >
               Custom Decoration
             </Link>
             <Link
               to="/contactus"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "3px #56623C" }}
+              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #56623C" }}
             >
               Contact Us
             </Link>
             <Link
               to="/gallery"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "3px #56623C" }}
+              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #56623C" }}
             >
               Gallery
             </Link>

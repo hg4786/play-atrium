@@ -10,6 +10,7 @@ import { PlayDayPassesSection } from "@/components/sections/PlayDayPassesSection
 import { FAQSection } from "@/components/sections/FAQSection"
 import { HeaderImage } from "@/components/HeaderImage"
 import { CustomTheme } from "@/components/sections/CustomTheme"
+import { PartyPackageComparisonSection } from "@/components/sections/PartyPackageComparisonSection"
 
 
 export default function PartiesAndEvents() {
@@ -50,14 +51,14 @@ export default function PartiesAndEvents() {
             <div className="grid grid-cols-2 gap-4 max-w-[600px] mx-auto px-4">
               <ScrollAnimation variant="zoomIn" delay={0.1}>
                 <RentalOptionCardMobile
-                  image="https://api.builder.io/api/v1/image/assets/TEMP/8e66bd8e264ec6b373ba841ad16e452b43b17f86?width=1714"
+                  image="/img/privateRentalImg.jpg"
                   title="PRIVATE RENTAL OPTION"
                   description="Perfect For Birthdays, Celebrations & Special Events"
                 />
               </ScrollAnimation>
               <ScrollAnimation variant="zoomIn" delay={0.2}>
                 <RentalOptionCardMobile
-                  image="https://api.builder.io/api/v1/image/assets/TEMP/aa3666101754da17e6c8e37585b3beaa0cb0f1?width=766"
+                  image="/img/extendedPrivateImg.png"
                   title="EXTENDED PRIVATE RENTAL"
                   description="Ideal For Larger Gatherings Or Longer Events"
                 />
@@ -167,7 +168,7 @@ export default function PartiesAndEvents() {
                   >
                     <div className="w-full aspect-square max-w-[240px] ml-auto rounded-[20px] overflow-hidden shadow-lg">
                       <img
-                        src="https://api.builder.io/api/v1/image/assets/TEMP/8e66bd8e264ec6b373ba841ad16e452b43b17f86?width=1714"
+                        src="/img/privateRentalImg.jpg"
                         alt="Private Rental Option"
                         className="w-full h-full object-cover"
                       />
@@ -188,7 +189,7 @@ export default function PartiesAndEvents() {
                   >
                     <div className="w-full aspect-square max-w-[240px] mr-auto rounded-[20px] overflow-hidden shadow-lg">
                       <img
-                        src="https://api.builder.io/api/v1/image/assets/TEMP/aa3666101754da17e6c8c5e37585b3beaa0cb0f1?width=766"
+                        src="/img/extendedPrivateImg.png"
                         alt="Extended Private Rental"
                         className="w-full h-full object-cover"
                       />
@@ -242,6 +243,12 @@ export default function PartiesAndEvents() {
 
       {/* Balloon Garlands Section */}
       <BalloonGarlandsSection />
+
+      {/* White Gap */}
+      <div className="bg-white h-2.5"></div>
+
+      {/* Play Day Passes Section */}
+      <PartyPackageComparisonSection />
 
       {/* White Gap */}
       <div className="bg-white h-2.5"></div>

@@ -1,10 +1,49 @@
 import { motion } from "framer-motion"
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import { useState, useEffect } from "react"
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel"
 import { ScrollAnimation } from "@/lib/animationUtils"
 import { DecorativeStarsTestimonials } from "./DecorativeStarsTestimonials"
 import { TestimonialCard } from "./TestimonialCard"
 
+const data = [
+  {
+    quote: "The staff handled everything smoothly, and the kids had an amazing time exploring all the play zones. The private rental made the whole event stress-free. We will definitely be back!",
+    author: "Jessica M."
+  },
+  {
+    quote: "Absolutely loved this place! The kids had so much fun and I appreciated how clean and safe everything was. Highly recommend for birthday parties!",
+    author: "Sarah K."
+  },
+  {
+    quote: "Best place for kids in the area! My children never want to leave. The membership is worth every penny!",
+    author: "Michael R."
+  },
+  {
+    quote: "The staff handled everything smoothly, and the kids had an amazing time exploring all the play zones. The private rental made the whole event stress-free. We will definitely be back!",
+    author: "Jessica M."
+  },
+]
+
 export function TestimonialsSection() {
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCurrent(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+  }, [api])
+
+  const scrollTo = (index: number) => {
+    api?.scrollTo(index)
+  }
+
   return (
     <section className="bg-white py-12 md:pb-20 relative overflow-hidden min-h-auto">
       <img
@@ -22,8 +61,8 @@ export function TestimonialsSection() {
           <ScrollAnimation variant="fadeUp">
             <div className="text-center space-y-1">
               <h2
-                className="font-fredoka text-2xl text-golden text-center leading-tight tracking-[1.44px]"
-                style={{ WebkitTextStroke: "3px #F4E9CD" }}
+                className="font-fredoka font-semibold text-2xl text-golden text-center leading-tight tracking-[1.44px]"
+                style={{ WebkitTextStroke: "1px #F4E9CD" }}
               >
                 What Parents Are Saying
               </h2>
@@ -35,57 +74,34 @@ export function TestimonialsSection() {
 
           <Carousel
             opts={{ align: "center", loop: true }}
-            className="w-full max-w-[362px]"
+            className="w-full max-w-[362px] pb-16"
+            setApi={setApi}
           >
             <CarouselContent className="-ml-0">
-              <CarouselItem className="pl-0">
-                <TestimonialCard
-                  quote="The staff handled everything smoothly, and the kids had an amazing time exploring all the play zones. The private rental made the whole event stress-free. We will definitely be back!"
-                  author="Jessica M."
-                />
-              </CarouselItem>
-              <CarouselItem className="pl-0">
-                <TestimonialCard
-                  quote="Absolutely loved this place! The kids had so much fun and I appreciated how clean and safe everything was. Highly recommend for birthday parties!"
-                  author="Sarah K."
-                />
-              </CarouselItem>
-              <CarouselItem className="pl-0">
-                <TestimonialCard
-                  quote="Best place for kids in the area! My children never want to leave. The membership is worth every penny!"
-                  author="Michael R."
-                />
-              </CarouselItem>
+              {data.map((item, index) => (
+                <CarouselItem key={index} className="pl-0">
+                  <TestimonialCard
+                    quote={item.quote}
+                    author={item.author}
+                  />
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 items-center justify-center">
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-                className="w-[15px] h-[14px] rounded-full bg-[#56623C]"
-              ></motion.div>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-                className="w-[15px] h-[14px] rounded-full bg-[#D9D9D9]"
-              ></motion.div>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.3 }}
-                className="w-[15px] h-[14px] rounded-full bg-[#D9D9D9]"
-              ></motion.div>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.4 }}
-                className="w-[15px] h-[14px] rounded-full bg-[#D9D9D9]"
-              ></motion.div>
+              {data.map((_, index) => (
+                <motion.button
+                  key={index}
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
+                  onClick={() => scrollTo(index)}
+                  className={`w-[15px] h-[14px] rounded-full transition-colors duration-300 cursor-pointer ${
+                    current === index ? "bg-[#56623C]" : "bg-[#D9D9D9]"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
           </Carousel>
         </div>
@@ -118,9 +134,7 @@ export function TestimonialsSection() {
                 <h2
                   className="font-fredoka text-[65px] xl:text-[50px] text-[#FCBE5A] text-center leading-none tracking-[4.854px]"
                   style={{
-                    WebkitTextStroke: "4px #F4E9CD",
-                    WebkitTextStrokeWidth: "7px",
-                    WebkitTextStrokeColor: "#F4E9CD"
+                    WebkitTextStroke: "2px #F4E9CD",
                   }}
                 >
                   What Parents Are Saying
@@ -153,7 +167,7 @@ export function TestimonialsSection() {
                   Jessica M.
                 </p>
 
-                <div className="flex gap-4 items-center pt-2">
+                {/* <div className="flex gap-4 items-center pt-2">
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
@@ -182,7 +196,7 @@ export function TestimonialsSection() {
                     transition={{ duration: 0.3, delay: 0.4 }}
                     className="w-[15px] h-[14px] rounded-full bg-[#D9D9D9]"
                   ></motion.div>
-                </div>
+                </div> */}
               </div>
             </div>
           </ScrollAnimation>

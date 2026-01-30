@@ -12,15 +12,15 @@ export function HeroSection() {
             transition={{ duration: 1.2, ease: "easeOut" }}
             src="https://api.builder.io/api/v1/image/assets/TEMP/306fb2177b2839afbb90acdfee67731b005e4479?width=976"
             alt="Kids playing"
-            className="absolute inset-0 w-full h-full object-cover opacity-90"
+            className="absolute inset-0 w-full object-cover opacity-90"
           />
           <div className="relative z-10 flex items-end justify-center h-[351px] px-6 pb-8">
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3, type: "spring", bounce: 0.4 }}
-              className="font-fredoka text-[28px] text-[#56623C] text-center leading-[40px] tracking-[1.68px] max-w-[386px]"
-              style={{ WebkitTextStroke: "3px #F4E9CD" }}
+              className="font-fredoka font-bold text-[28px] text-[#56623C] text-center leading-[40px] tracking-[1.68px] max-w-[386px]"
+              style={{ WebkitTextStroke: "1px #F4E9CD" }}
             >
               Play. Laugh. Celebrate. Repeat.
             </motion.h1>
@@ -82,8 +82,8 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.5, type: "spring", bounce: 0.4 }}
-              className="font-fredoka text-6xl xl:text-[64px] text-[#56623C] text-center leading-tight tracking-[3.84px] relative z-10 max-w-[825px]"
-              style={{ WebkitTextStroke: "7px #F4E9CD" }}
+              className="font-fredoka text-6xl xl:text-[64px] text-[#56623C] text-center leading-tight tracking-normal relative z-10 max-w-[825px]"
+              style={{ WebkitTextStroke: "3px #F4E9CD" }}
             >
               Play. Laugh. Celebrate. Repeat.
             </motion.h1>

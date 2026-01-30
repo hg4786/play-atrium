@@ -8,10 +8,10 @@ export function AboutSection() {
       className="bg-olive py-12 md:py-20 lg:py-24 px-6 lg:px-20"
     >
       <div className="max-w-[1704px] mx-auto">
-        <div className="grid lg:grid-cols-[362px_1fr_366px] gap-6 lg:gap-8 xl:gap-12 items-center">
+        <div className="grid 2xl:grid-cols-[362px_1fr_366px] gap-6 lg:gap-8 xl:gap-12 items-center">
           {/* Left: Images - Desktop only */}
           <ScrollAnimation variant="fadeLeft">
-            <div className="hidden lg:block relative">
+            <div className="hidden 2xl:block relative">
               <div className="space-y-6">
                 <motion.img
                   whileHover={{ scale: 1.05, rotate: 2 }}
@@ -35,14 +35,14 @@ export function AboutSection() {
           <ScrollAnimation variant="slideUp">
             <div className="space-y-6 md:space-y-8 lg:space-y-12">
               <h2
-                className="font-fredoka text-2xl md:text-4xl lg:text-5xl text-olive text-center leading-tight lg:leading-tight tracking-wider lg:tracking-widest"
-                style={{ WebkitTextStroke: "3px #F4E9CD" }}
+                className="font-fredoka font-bold text-2xl md:text-4xl lg:text-3xl xl:text-4xl 2xl:text-5xl text-olive text-center leading-tight lg:leading-tight tracking-wider lg:tracking-widest"
+                style={{ WebkitTextStroke: "0.5px #F4E9CD" }}
               >
                 Where Play, Imagination & Family Fun Come to Life.
               </h2>
 
               {/* Mobile Images */}
-              <div className="lg:hidden grid grid-cols-2 gap-0.5">
+              <div className="2xl:hidden grid grid-cols-2 gap-0.5">
                 <motion.img
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -65,18 +65,11 @@ export function AboutSection() {
 
               <div className="space-y-6 max-w-[838px] mx-auto">
                 <p className="text-white text-center text-sm md:text-xl leading-7 md:leading-[35px]">
-                  <span className="font-light">
-                    The Play Atrium was created with one goal in mind: to give
-                    families a safe, clean, and joyful place to play, connect,
-                    and celebrate together. With{" "}
-                  </span>
-                  <span className="font-semibold">
-                    4,000 sq ft of open play space, modern equipment, and a
-                    warm, welcoming atmosphere
-                  </span>
-                  <span className="font-light">
-                    , we're dedicated to making every visit feel special.
-                  </span>
+                  The Play Atrium was created with one goal in mind: to give
+                  families a safe, clean, and joyful place to play, connect,
+                  and celebrate together. With 4,000 sq ft of open play space,
+                  modern equipment, and a warm, welcoming atmosphere, we're
+                  dedicated to making every visit feel special.
                 </p>
 
                 <p className="text-white text-center text-sm md:text-xl font-light leading-7 md:leading-[35px]">
@@ -100,7 +93,7 @@ export function AboutSection() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
-                  className="border border-white text-white px-[114px] md:px-11 py-3.5 rounded-full font-inter font-semibold text-xs md:text-lg tracking-[0.9px] hover:bg-white hover:text-olive transition-colors shadow-md"
+                  className="border border-white text-white sm:px-[114px] md:px-11 py-3.5 rounded-full font-inter font-semibold text-xs md:text-lg tracking-[0.9px] hover:bg-white hover:text-olive transition-colors shadow-md"
                 >
                   Get a Day Pass
                 </motion.button>
@@ -110,7 +103,7 @@ export function AboutSection() {
 
           {/* Right: Images - Desktop only */}
           <ScrollAnimation variant="fadeRight">
-            <div className="hidden lg:block relative">
+            <div className="hidden 2xl:block relative">
               <div className="space-y-6">
                 <motion.img
                   whileHover={{ scale: 1.05, rotate: -2 }}

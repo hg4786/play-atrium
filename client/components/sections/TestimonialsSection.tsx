@@ -5,6 +5,25 @@ import { ScrollAnimation } from "@/lib/animationUtils"
 import { DecorativeStarsTestimonials } from "./DecorativeStarsTestimonials"
 import { TestimonialCard } from "./TestimonialCard"
 
+const data = [
+  {
+    quote: "The staff handled everything smoothly, and the kids had an amazing time exploring all the play zones. The private rental made the whole event stress-free. We will definitely be back!",
+    author: "Jessica M."
+  },
+  {
+    quote: "Absolutely loved this place! The kids had so much fun and I appreciated how clean and safe everything was. Highly recommend for birthday parties!",
+    author: "Sarah K."
+  },
+  {
+    quote: "Best place for kids in the area! My children never want to leave. The membership is worth every penny!",
+    author: "Michael R."
+  },
+  {
+    quote: "The staff handled everything smoothly, and the kids had an amazing time exploring all the play zones. The private rental made the whole event stress-free. We will definitely be back!",
+    author: "Jessica M."
+  },
+]
+
 export function TestimonialsSection() {
   const [api, setApi] = useState<CarouselApi>()
   const [current, setCurrent] = useState(0)
@@ -59,27 +78,17 @@ export function TestimonialsSection() {
             setApi={setApi}
           >
             <CarouselContent className="-ml-0">
-              <CarouselItem className="pl-0">
-                <TestimonialCard
-                  quote="The staff handled everything smoothly, and the kids had an amazing time exploring all the play zones. The private rental made the whole event stress-free. We will definitely be back!"
-                  author="Jessica M."
-                />
-              </CarouselItem>
-              <CarouselItem className="pl-0">
-                <TestimonialCard
-                  quote="Absolutely loved this place! The kids had so much fun and I appreciated how clean and safe everything was. Highly recommend for birthday parties!"
-                  author="Sarah K."
-                />
-              </CarouselItem>
-              <CarouselItem className="pl-0">
-                <TestimonialCard
-                  quote="Best place for kids in the area! My children never want to leave. The membership is worth every penny!"
-                  author="Michael R."
-                />
-              </CarouselItem>
+              {data.map((item, index) => (
+                <CarouselItem key={index} className="pl-0">
+                  <TestimonialCard
+                    quote={item.quote}
+                    author={item.author}
+                  />
+                </CarouselItem>
+              ))}
             </CarouselContent>
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 items-center justify-center">
-              {[0, 1, 2].map((index) => (
+              {data.map((_, index) => (
                 <motion.button
                   key={index}
                   initial={{ scale: 0 }}

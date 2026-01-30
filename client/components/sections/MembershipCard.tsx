@@ -21,11 +21,11 @@ export function MembershipCard({
         <div className="border-b border-[#DEB8A5] w-full space-y-3 lg:space-y-4">
           <h3
             className="font-fredoka text-[20px] text-golden tracking-[2.16px]"
-            style={{ WebkitTextStroke: "1px #F5EBD2" }}
+            style={{ WebkitTextStroke: "0.5px #F5EBD2" }}
           >
             {title}
           </h3>
-          <p className="font-fredoka text-[30px] text-golden" style={{ WebkitTextStroke: "1px #F5DFC3" }}>
+          <p className="font-fredoka text-[50px] text-golden" style={{ WebkitTextStroke: "1px #F5DFC3" }}>
             {price}
           </p>
         </div>

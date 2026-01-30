@@ -1,10 +1,30 @@
 import { motion } from "framer-motion"
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import { useState, useEffect } from "react"
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from "@/components/ui/carousel"
 import { ScrollAnimation } from "@/lib/animationUtils"
 import { DecorativeStarsTestimonials } from "./DecorativeStarsTestimonials"
 import { TestimonialCard } from "./TestimonialCard"
 
 export function TestimonialsSection() {
+  const [api, setApi] = useState<CarouselApi>()
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+
+    setCurrent(api.selectedScrollSnap())
+
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap())
+    })
+  }, [api])
+
+  const scrollTo = (index: number) => {
+    api?.scrollTo(index)
+  }
+
   return (
     <section className="bg-white py-12 md:pb-20 relative overflow-hidden min-h-auto">
       <img
@@ -22,8 +42,8 @@ export function TestimonialsSection() {
           <ScrollAnimation variant="fadeUp">
             <div className="text-center space-y-1">
               <h2
-                className="font-fredoka text-2xl text-golden text-center leading-tight tracking-[1.44px]"
-                style={{ WebkitTextStroke: "3px #F4E9CD" }}
+                className="font-fredoka font-semibold text-2xl text-golden text-center leading-tight tracking-[1.44px]"
+                style={{ WebkitTextStroke: "1px #F4E9CD" }}
               >
                 What Parents Are Saying
               </h2>
@@ -36,6 +56,7 @@ export function TestimonialsSection() {
           <Carousel
             opts={{ align: "center", loop: true }}
             className="w-full max-w-[362px] pb-16"
+            setApi={setApi}
           >
             <CarouselContent className="-ml-0">
               <CarouselItem className="pl-0">
@@ -58,34 +79,20 @@ export function TestimonialsSection() {
               </CarouselItem>
             </CarouselContent>
             <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 items-center justify-center">
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.1 }}
-                className="w-[15px] h-[14px] rounded-full bg-[#56623C]"
-              ></motion.div>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.2 }}
-                className="w-[15px] h-[14px] rounded-full bg-[#D9D9D9]"
-              ></motion.div>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.3 }}
-                className="w-[15px] h-[14px] rounded-full bg-[#D9D9D9]"
-              ></motion.div>
-              <motion.div
-                initial={{ scale: 0 }}
-                whileInView={{ scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: 0.4 }}
-                className="w-[15px] h-[14px] rounded-full bg-[#D9D9D9]"
-              ></motion.div>
+              {[0, 1, 2].map((index) => (
+                <motion.button
+                  key={index}
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: 0.1 + index * 0.1 }}
+                  onClick={() => scrollTo(index)}
+                  className={`w-[15px] h-[14px] rounded-full transition-colors duration-300 cursor-pointer ${
+                    current === index ? "bg-[#56623C]" : "bg-[#D9D9D9]"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
             </div>
           </Carousel>
         </div>
@@ -118,9 +125,7 @@ export function TestimonialsSection() {
                 <h2
                   className="font-fredoka text-[65px] xl:text-[50px] text-[#FCBE5A] text-center leading-none tracking-[4.854px]"
                   style={{
-                    WebkitTextStroke: "4px #F4E9CD",
-                    WebkitTextStrokeWidth: "7px",
-                    WebkitTextStrokeColor: "#F4E9CD"
+                    WebkitTextStroke: "2px #F4E9CD",
                   }}
                 >
                   What Parents Are Saying
@@ -153,7 +158,7 @@ export function TestimonialsSection() {
                   Jessica M.
                 </p>
 
-                <div className="flex gap-4 items-center pt-2">
+                {/* <div className="flex gap-4 items-center pt-2">
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
@@ -182,7 +187,7 @@ export function TestimonialsSection() {
                     transition={{ duration: 0.3, delay: 0.4 }}
                     className="w-[15px] h-[14px] rounded-full bg-[#D9D9D9]"
                   ></motion.div>
-                </div>
+                </div> */}
               </div>
             </div>
           </ScrollAnimation>

@@ -10,6 +10,7 @@ import { PlayDayPassesSection } from "@/components/sections/PlayDayPassesSection
 import { FAQSection } from "@/components/sections/FAQSection"
 import { HeaderImage } from "@/components/HeaderImage"
 import { CustomTheme } from "@/components/sections/CustomTheme"
+import { PartyPackageComparisonSection } from "@/components/sections/PartyPackageComparisonSection"
 
 
 export default function PartiesAndEvents() {
@@ -242,6 +243,12 @@ export default function PartiesAndEvents() {
 
       {/* Balloon Garlands Section */}
       <BalloonGarlandsSection />
+
+      {/* White Gap */}
+      <div className="bg-white h-2.5"></div>
+
+      {/* Play Day Passes Section */}
+      <PartyPackageComparisonSection />
 
       {/* White Gap */}
       <div className="bg-white h-2.5"></div>

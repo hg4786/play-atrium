@@ -10,10 +10,10 @@ interface PackageCardProps {
 
 export default function PackageCard({ title, price, duration, ageLimit, features }: PackageCardProps) {
     return (
-        <div className="w-full max-w-[400px] mx-auto bg-beige rounded-[11px] overflow-hidden border-2 border-olive shadow-lg h-full flex flex-col border-b-8 border-b-golden">
+        <div className="w-full max-w-[400px] mx-auto bg-beige rounded-[11px] overflow-hidden border-2 h-full flex flex-col border-b-8 border-b-golden">
             {/* Title */}
             <div className="bg-beige py-3 text-center">
-                <h3 className="font-fredoka font-bold text-xl md:text-2xl text-golden" style={{ WebkitTextStroke: "1px #56623C" }}>
+                <h3 className="font-fredoka font-bold text-xl tracking-wider md:text-2xl text-golden" style={{ WebkitTextStroke: "0.5px #56623C" }}>
                     {title}
                 </h3>
             </div>

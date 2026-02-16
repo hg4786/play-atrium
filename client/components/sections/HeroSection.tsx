@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 export function HeroSection() {
   return (
-    <section className="bg-[#56623C] relative overflow-hidden w-full">
+    <section className="bg-[#639438] relative overflow-hidden w-full">
       <div className="w-full">
         {/* Mobile: Full width hero image with text overlay */}
         <div className="lg:hidden relative min-h-[351px]">
@@ -19,8 +19,8 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.3, type: "spring", bounce: 0.4 }}
-              className="font-fredoka font-bold text-[28px] text-[#56623C] text-center leading-[40px] tracking-[1.68px] max-w-[386px]"
-              style={{ WebkitTextStroke: "1px #F4E9CD" }}
+              className="font-fredoka font-bold text-[28px] text-brown text-center leading-[40px] tracking-[1.68px] max-w-[386px]"
+              style={{ WebkitTextStroke: "1px white" }}
             >
               Play. Laugh. Celebrate. Repeat.
             </motion.h1>
@@ -82,7 +82,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2, delay: 0.5, type: "spring", bounce: 0.4 }}
-              className="font-fredoka text-6xl xl:text-[64px] text-[#56623C] text-center leading-tight tracking-normal relative z-10 max-w-[825px]"
+              className="font-fredoka text-6xl xl:text-[64px] text-brown text-center leading-tight tracking-normal relative z-10 max-w-[825px]"
               style={{ WebkitTextStroke: "3px #F4E9CD" }}
             >
               Play. Laugh. Celebrate. Repeat.

@@ -13,12 +13,12 @@ export function PlayDayPassesSection() {
         <div className="lg:hidden">
           <ScrollAnimation variant="fadeUp">
             <div className="px-4 mb-6 space-y-3">
-              <p className="text-[#55613B] text-sm font-medium text-center">
+              <p className="text-olive text-sm font-medium text-center">
                 OPEN PLAY
               </p>
               <h2
                 className="font-fredoka font-bold text-3xl text-golden tracking-normal text-center"
-                style={{ WebkitTextStroke: "0.5px #56623C" }}
+                style={{ WebkitTextStroke: "0.5px #5E2E1C" }}
               >
                 Play Day Passes
               </h2>
@@ -48,14 +48,14 @@ export function PlayDayPassesSection() {
         <div className="hidden lg:grid grid-cols-[468px_1fr] gap-8 lg:gap-14 items-start">
           {/* Left: Dark Box */}
           <ScrollAnimation variant="fadeLeft">
-            <div className="bg-[#54643D] p-8 md:p-10 lg:p-12 flex flex-col items-center justify-center text-center space-y-10 lg:space-y-12 h-full">
+            <div className="bg-brown p-8 md:p-10 lg:p-12 flex flex-col items-center justify-center text-center space-y-10 lg:space-y-12 h-full">
               <div className="space-y-3">
                 <motion.h3
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="font-poppins text-white text-4xl md:text-5xl font-medium"
+                  className="font-poppins text-golden text-4xl md:text-5xl font-medium"
                 >
                   We are
                 </motion.h3>
@@ -64,7 +64,7 @@ export function PlayDayPassesSection() {
                   whileInView={{ opacity: 1, rotate: 0, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, type: "spring" }}
-                  className="font-playball text-beige text-6xl md:text-7xl lg:text-[93px] leading-tight"
+                  className="font-playball text-golden text-6xl md:text-7xl lg:text-[93px] leading-tight"
                 >
                   Socks only
                 </motion.h2>
@@ -73,7 +73,7 @@ export function PlayDayPassesSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="font-poppins text-white text-4xl md:text-5xl font-medium"
+                  className="font-poppins text-golden text-4xl md:text-5xl font-medium"
                 >
                   Facility
                 </motion.h3>
@@ -100,7 +100,7 @@ export function PlayDayPassesSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-white text-lg md:text-xl font-quicksand max-w-[405px] leading-[35px]"
+                className="text-golden text-lg md:text-xl font-quicksand max-w-[405px] leading-[35px]"
               >
                 All adults and children must wear socks. We sell socks in case
                 you forget to bring them.
@@ -112,10 +112,14 @@ export function PlayDayPassesSection() {
           <ScrollAnimation variant="slideUp">
             <div className="space-y-8 lg:space-y-10">
               <div className="space-y-4">
-                <p className="text-[#55613B] text-lg md:text-xl font-medium">
+                <p className="text-olive text-lg md:text-xl font-medium">
                   OPEN PLAY
                 </p>
-                <h2 className="font-fredoka text-4xl sm:text-5xl md:text-6xl lg:text-[80.9px] text-golden tracking-[0.06em] text-stroke-md leading-tight">
+                <h2 className="font-fredoka text-4xl sm:text-5xl md:text-6xl lg:text-[80.9px] text-golden tracking-[0.06em] text-stroke-md leading-tight"
+                  style={{
+                    WebkitTextStroke: "4px #5E2E1C",
+                  }}
+                >
                   Play Day Passes
                 </h2>
                 <p className="text-[#333333] text-lg md:text-xl font-light leading-[35px] max-w-[800px]">
@@ -126,7 +130,7 @@ export function PlayDayPassesSection() {
               <div className="grid lg:grid-cols-[535px_1fr] gap-8 items-start">
                 <div className="space-y-8 lg:space-y-12">
                   <div className="space-y-4">
-                    <p className="text-golden text-2xl md:text-[28px] font-poppins font-normal">
+                    <p className="text-brown text-2xl md:text-[28px] font-poppins font-normal">
                       Weekday Pass
                     </p>
                     <motion.p
@@ -135,7 +139,7 @@ export function PlayDayPassesSection() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, type: "spring", bounce: 0.6 }}
                       className="font-fredoka font-extrabold text-5xl lg:text-[70px] text-golden tracking-normal"
-                      style={{ WebkitTextStroke: "1px #56623C" }}>$15.99
+                      style={{ WebkitTextStroke: "1px #5E2E1C" }}>$15.99
                     </motion.p>
                   </div>
 
@@ -150,7 +154,7 @@ export function PlayDayPassesSection() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    className="w-full max-w-[258px] bg-[#54643D] text-beige py-3.5 rounded-full font-poppins font-semibold text-lg tracking-[0.9px] hover:bg-olive transition-colors shadow-md"
+                    className="w-full max-w-[258px] bg-brown text-beige py-3.5 rounded-full font-poppins font-semibold text-lg tracking-[0.9px] hover:bg-olive transition-colors shadow-md"
                   >
                     BOOK NOW
                   </motion.button>

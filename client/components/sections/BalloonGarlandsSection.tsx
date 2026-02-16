@@ -80,7 +80,7 @@ export function BalloonGarlandsSection() {
     >
       <div className="max-w-[1920px] mx-auto">
         {/* Mobile View */}
-        <div className="lg:hidden bg-[#54643D] py-12 px-6 relative min-h-[400px]">
+        <div className="lg:hidden bg-olive py-12 px-6 relative min-h-[400px]">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ export function BalloonGarlandsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-fredoka font-bold text-2xl text-olive text-center leading-normal tracking-[1.44px] mb-4"
+            className="font-fredoka font-bold text-2xl text-brown text-center leading-normal tracking-[1.44px] mb-4"
             style={{ WebkitTextStroke: "1px #F4E9CD" }}
           >
             BALLOON GARLANDS & PARTY DECOR
@@ -161,13 +161,13 @@ export function BalloonGarlandsSection() {
         <div className="hidden lg:flex lg:gap-[13px]">
           {/* Left Column: Dark Panel with Heading (583px) */}
           <ScrollAnimation variant="fadeLeft">
-            <div className="w-[500px] min-h-[650px] bg-[#54643D] flex flex-col items-center px-10 relative">
+            <div className="w-[500px] min-h-[650px] bg-olive flex flex-col items-center justify-center px-10 relative">
               <div className="flex flex-col items-center gap-5 max-w-[505px] mt-[80px]">
                 <p className="text-[#FFEBEB] text-lg text-center font-inter">
                   Make Your Celebration Picture-Perfect
                 </p>
                 <h2
-                  className="font-fredoka text-[48px] text-[#56623C] text-center leading-tight tracking-[3.84px] max-w-[499px]"
+                  className="font-fredoka text-[48px] text-brown text-center leading-tight tracking-[3.84px] max-w-[499px]"
                   style={{ WebkitTextStroke: "3px #F4E9CD" }}
                 >
                   BALLOON GARLANDS & PARTY DECOR
@@ -177,7 +177,7 @@ export function BalloonGarlandsSection() {
                   make decorating easy!
                 </p>
               </div>
-              <motion.img
+              {/* <motion.img
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 animate={{ y: [0, -10, 0] }}
@@ -190,7 +190,7 @@ export function BalloonGarlandsSection() {
                 alt="Decorative balloons"
                 className="absolute bottom-0 left-0 w-full h-[250px] object-contain"
                 style={{ transform: "rotate(2.982deg)" }}
-              />
+              /> */}
             </div>
           </ScrollAnimation>
 
@@ -209,8 +209,8 @@ export function BalloonGarlandsSection() {
                     {column.titlePosition === "top" && (
                       <div className="py-2 flex-shrink-0">
                         <h3
-                          className="font-fredoka text-[36px] text-[#FCBE5A] text-center tracking-[2.574px] leading-tight"
-                          style={{ WebkitTextStroke: "2px #54643D" }}
+                          className="font-fredoka text-[36px] text-beige text-center tracking-0 leading-tight"
+                          style={{ WebkitTextStroke: "4px #5E2E1C" }}
                         >
                           {column.title}
                         </h3>
@@ -236,12 +236,12 @@ export function BalloonGarlandsSection() {
                               {item.name}
                             </p>
                             <p
-                              className="font-poppins text-[24px] text-[#FCBE5A] font-semibold"
-                              style={{ WebkitTextStroke: "2px #5A6943" }}
+                              className="font-poppins text-[24px] text-beige font-bold"
+                              style={{ WebkitTextStroke: "2px #5E2E1C" }}
                             >
                               {item.price}
                             </p>
-                            <button className="w-[90px] py-1 text-xs bg-[#54643D] text-beige rounded-full font-inter font-semibold tracking-[0.9px] hover:bg-olive transition-colors shadow-md">
+                            <button className="w-[90px] py-1 text-xs bg-brown text-beige rounded-full font-inter font-semibold tracking-[0.9px] hover:bg-olive transition-colors shadow-md">
                               BOOK NOW
                             </button>
                           </div>

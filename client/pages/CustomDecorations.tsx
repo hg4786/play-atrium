@@ -61,7 +61,7 @@ export default function CustomDecorations() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {HOW_IT_WORKS_STEPS.map((step, index) => (
               <ScrollAnimation key={step.id} variant="zoomIn" delay={(index + 1) * 0.1}>
-                <div className="h-full bg-white rounded-3xl p-6 md:p-8 shadow-lg border-b-[6px] border-brown flex flex-col items-center text-center">
+                <div className="h-full bg-golden rounded-3xl p-6 md:p-8 shadow-lg border-b-[6px] border-brown flex flex-col items-center text-center">
                   <div className="font-fredoka text-brown text-2xl md:text-3xl mb-4">
                     {step.id}
                   </div>

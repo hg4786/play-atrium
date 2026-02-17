@@ -150,9 +150,9 @@ export default function ContactUs() {
           <div className="lg:hidden">
             {/* Header */}
             <div className="text-center mb-8">
-              <h2 className="font-fredoka text-[#FFBC56] text-4xl md:text-5xl mb-4"
+              <h2 className="font-fredoka text-golden text-4xl md:text-5xl mb-4"
                 style={{
-                  WebkitTextStroke: "2px #56623c",
+                  WebkitTextStroke: "2px #5E2E1C",
                 }}
               >
                 Get in Touch
@@ -163,7 +163,7 @@ export default function ContactUs() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-[#56623c] p-6 md:p-8 mb-8">
+            <div className="bg-brown p-6 md:p-8 mb-8">
               <h3 className="font-fredoka text-transparent text-2xl md:text-3xl mb-3 text-center"
                 style={{
                   WebkitTextStroke: "2px #F4E9CD",
@@ -217,7 +217,7 @@ export default function ContactUs() {
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full bg-[#f4e9cd] text-[#56623c] py-3 rounded-full font-poppins font-semibold hover:bg-[#e8dbb8] transition-colors"
+                  className="w-full bg-[#f4e9cd] text-brown py-3 rounded-full font-poppins font-semibold hover:bg-[#e8dbb8] transition-colors"
                 >
                   Send Message
                 </button>
@@ -229,22 +229,22 @@ export default function ContactUs() {
               {/* Contact Details */}
               <div className="space-y-4 text-center">
                 <div>
-                  <h3 className="font-poppins font-semibold text-[#56623c] mb-2">Address</h3>
-                  <p className="text-[#56623c] text-sm">
+                  <h3 className="font-poppins font-semibold text-brown mb-2">Address</h3>
+                  <p className="text-sm">
                     10640 Northwest Fwy,<br />
                     Houston, TX 77092
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-poppins font-semibold text-[#56623c] mb-2">Email & Phone</h3>
-                  <p className="text-[#56623c] text-sm">
+                  <h3 className="font-poppins font-semibold text-brown mb-2">Email & Phone</h3>
+                  <p className="text-sm">
                     Email: ambient@example.com<br />
                     Phone: +88 (0) 101 0000 000
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-poppins font-semibold text-[#56623c] mb-2">Hours Of Operations</h3>
-                  <p className="text-[#56623c] text-sm">
+                  <h3 className="font-poppins font-semibold text-brown mb-2">Hours Of Operations</h3>
+                  <p className="text-sm">
                     Monday - Friday : 10:00 am - 6:00 pm<br />
                     Saturday : 9:00 Am - 6:00 Pm<br />
                     Sunday : 10:00 AM - 5:00 PM

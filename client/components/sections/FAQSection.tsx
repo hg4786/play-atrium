@@ -49,16 +49,16 @@ export function FAQSection() {
   ]
 
   return (
-    <section className="bg-[#f4e9cd] py-12 md:py-16 lg:py-20">
+    <section className="bg-beige py-12 md:py-16 lg:py-20">
       <div className="container mx-auto px-4">
         {/* Mobile Layout */}
         <div className="lg:hidden">
           {/* Header */}
           <div className="text-center mb-8">
             <h2
-              className="font-fredoka text-[#FFBC56] text-4xl md:text-5xl mb-4"
+              className="font-fredoka text-golden text-4xl md:text-5xl mb-4"
               style={{
-                WebkitTextStroke: "2px #56623c",
+                WebkitTextStroke: "2px #5E2E1C",
               }}
             >
               Frequently Asked Questions
@@ -84,9 +84,9 @@ export function FAQSection() {
           {/* Header */}
           <div className="text-center mb-12">
             <h2
-              className="font-fredoka text-[#FFBC56] text-5xl xl:text-6xl"
+              className="font-fredoka text-golden text-5xl xl:text-6xl"
               style={{
-                WebkitTextStroke: "2px #56623c",
+                WebkitTextStroke: "4px #5E2E1C",
               }}
             >
               Frequently Asked Questions
@@ -102,7 +102,7 @@ export function FAQSection() {
                     <img
                       src={src}
                       alt={`Party Image ${index + 1}`}
-                      className="w-full h-full object-cover aspect-square border-2 border-[#FCBE5A]"
+                      className="w-full h-full object-cover aspect-square border-2 border-golden"
                     />
                   </div>
                 </ScrollAnimation>

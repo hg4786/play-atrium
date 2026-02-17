@@ -28,8 +28,8 @@ export default {
           DEFAULT: "#639438",
         },
         golden: {
-          DEFAULT: "#FCBE5A",
-          light: "#FFBC56",
+          DEFAULT: "#F7D54F",
+          light: "#F7D54F",
         },
         brown: {
           DEFAULT: "#5E2E1C",

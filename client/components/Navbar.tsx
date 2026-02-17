@@ -29,7 +29,6 @@ export function Navbar() {
             <NavLink href="/contactus" isActive={pathname === "/contactus"}>Contact Us</NavLink>
             <NavLink href="/gallery" isActive={pathname === "/gallery"}>Gallery</NavLink>
           </div>
-          <div className="w-px h-16 bg-olive/20 mx-3"></div>
           <button className="bg-brown text-[#F4E9CD] px-6 py-2.5 rounded-full text-sm tracking-[0.9px] hover:opacity-90 transition-opacity whitespace-nowrap">
             Become a Member
           </button>
@@ -127,7 +126,7 @@ function NavLink({
     <Link
       to={href}
       className={`font-fredoka font-bold text-xl text-center px-3.5 hover:opacity-80 transition-opacity whitespace-nowrap ${
-        isActive ? "text-transparent underline underline-offset-8 decoration-2" : "text-transparent"
+        isActive ? "text-golden underline underline-offset-8 decoration-2" : "text-transparent"
       }`}
       style={{
         WebkitTextStroke: "1px #5E2E1C",

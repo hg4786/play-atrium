@@ -61,7 +61,7 @@ const columns = [
       },
       {
         name: "1 COLOR BACKDROP + 12FT BALLOONS",
-        price: "$180",
+        price: "$280",
         image: "https://cdn.builder.io/api/v1/image/assets%2Ff6464ae0a97c45b597577376c5ab2661%2F94305455275840f6a07d944b375a3a9a?format=webp&width=800",
         imagePosition: "right"
       }
@@ -204,7 +204,7 @@ export function BalloonGarlandsSection() {
             <div className="flex gap-[13px]">
               {columns.map((column, colIndex) => (
                 <ScrollAnimation key={colIndex} variant={column.animation as any} delay={column.delay}>
-                  <div className="w-[450px] min-h-[650px] bg-beige flex flex-col p-4 flex-shrink-0">
+                  <div className="w-[450px] min-h-[650px] bg-golden flex flex-col p-4 flex-shrink-0">
                     {/* Title at Top */}
                     {column.titlePosition === "top" && (
                       <div className="py-2 flex-shrink-0">
@@ -271,8 +271,8 @@ export function BalloonGarlandsSection() {
                     {column.titlePosition === "bottom" && (
                       <div className="py-2 flex-shrink-0">
                         <h3
-                          className="font-fredoka text-[36px] text-[#FCBE5A] text-center tracking-[2.574px] leading-tight"
-                          style={{ WebkitTextStroke: "2px #54643D" }}
+                          className="font-fredoka text-[36px] text-beige text-center tracking-[2.574px] leading-tight"
+                          style={{ WebkitTextStroke: "4px #5E2E1C" }}
                         >
                           {column.title}
                         </h3>

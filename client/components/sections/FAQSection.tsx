@@ -10,24 +10,34 @@ export function FAQSection() {
 
   const faqs = [
     {
-      question: "Do I need to book in advance?",
-      answer: "Walk-ins are welcome, but advance booking is recommended during weekends, holidays, and peak hours to avoid waiting.",
+      question: "When Is Open Play?",
+      answer: (
+        <div className="space-y-1">
+          <p>Open Play Hours:</p>
+          <p>Monday–Saturday: 9:00 AM – 6:00 PM</p>
+          <p className="pb-2">Sunday: 11:00 AM – 5:00 PM</p>
+          <p>• No reservations required for open play</p>
+          <p>• Children under 12 months play free with a paid sibling</p>
+          <p>• Adults are always free</p>
+          <p>• Grip socks are required for all children. Parents entering the play area must wear socks.</p>
+        </div>
+      ),
     },
     {
-      question: "What is the entry fee?",
-      answer: "Our entry fees vary based on the type of visit and age group. Please check our pricing section or contact us for detailed information.",
+      question: "What Play Areas Do You Have?",
+      answer: "We offer a variety of interactive play zones including our main multi-level custom playground, a dedicated toddler area, ball pits, slides, and sensory-rich environments designed for exploration and fun.",
     },
     {
-      question: "Are socks required?",
-      answer: "Yes, socks are required for all visitors for safety and hygiene purposes. You can bring your own or purchase them at our facility.",
+      question: "What Are the Lanky Land Rules?",
+      answer: "To ensure everyone's safety, we require grip socks for children, adult supervision at all times, no outside food in play areas, and following our gentle play guidelines. Detailed rules are posted throughout the facility.",
     },
     {
-      question: "Is outside food allowed?",
-      answer: "Outside food is allowed for private events and birthday parties. For regular open play, we have a cafe with snacks and beverages available.",
+      question: "How Do I Book a Party?",
+      answer: "You can book a party through our online booking system or by contacting our events coordinator directly. Explore our party packages to find the perfect fit for your celebration!",
     },
     {
-      question: "What is your refund or cancellation policy?",
-      answer: "Cancellations made 48 hours in advance are eligible for a full refund. Cancellations within 48 hours may receive a partial refund or credit for future visits.",
+      question: "Do You Require Grip Socks?",
+      answer: "Yes, grip socks are mandatory for all children for safety and hygiene. Parents entering the play area are also required to wear socks. Grip socks are available for purchase at the front desk.",
     },
   ]
 
@@ -126,7 +136,7 @@ function FAQItem({
   onClick,
 }: {
   question: string
-  answer: string
+  answer: React.ReactNode
   isOpen: boolean
   onClick: () => void
 }) {
@@ -136,7 +146,7 @@ function FAQItem({
       <button
         onClick={onClick}
         className={`w-full px-6 py-4 flex items-center justify-between text-left transition-all duration-300 border border-olive ${
-          isOpen ? "bg-[#56623c] text-white rounded-full" : "text-[#56623c] rounded-full"
+          isOpen ? "bg-olive text-white rounded-[25px]" : "rounded-[25px]"
         }`}
       >
         <span className="font-poppins font-medium text-sm md:text-base pr-4">{question}</span>
@@ -160,7 +170,7 @@ function FAQItem({
         transition={{ duration: 0.3, ease: "easeInOut" }}
         className="overflow-hidden"
       >
-        <div className="py-4 bg-[#f4e9cd] text-[#56623c] text-sm md:text-base leading-relaxed rounded-b-3xl">
+        <div className="py-6 px-4 text-sm md:text-base leading-relaxed">
           {answer}
         </div>
       </motion.div>

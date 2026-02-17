@@ -16,7 +16,7 @@ export function MembershipSection() {
         <ScrollAnimation variant="bounce">
           <div className="text-center mb-6 md:mb-12 space-y-3">
             <h2
-              className="font-fredoka text-2xl md:text-6xl lg:text-[81px] text-golden text-center leading-tight tracking-[1.44px] lg:tracking-[4.854px] mb-3"
+              className="font-fredoka text-2xl md:text-6xl lg:text-[81px] text-golden text-center leading-tight tracking-tighter mb-3"
               style={{ WebkitTextStroke: "2px #56623C" }}
             >
               Monthly Membership

@@ -6,9 +6,9 @@ export function CustomTheme() {
                 <div className="flex flex-col items-center text-center lg:hidden">
                     <div className="mb-8">
                         <img
-                            src="/img/childrenPlaying.png"
+                            src="/img/customThemeBg.jpg"
                             alt="Kids playing on colorful playground"
-                            className="w-full max-w-md mx-auto"
+                            className="w-full max-w-md mx-auto aspect-[4/3] object-cover border-2 border-golden rounded-lg"
                         />
                     </div>
                     <div className="text-white">
@@ -41,15 +41,15 @@ export function CustomTheme() {
                         <p className="text-lg xl:text-xl mb-8 max-w-lg">
                             Create a personalized celebration designed just for your child.
                         </p>
-                        <button className="bg-golden text-brown px-14 py-3 rounded-full font-poppins font-semibold hover:bg-[#e8dbb8] transition-colors">
+                        <button className="bg-golden text-brown px-14 py-3 rounded-full font-poppins font-semibold hover:bg-[#e8dbb8] transition-colors shadow-lg">
                             Book Now
                         </button>
                     </div>
                     <div className="flex-1">
                         <img
-                            src="/img/childrenPlaying.png"
+                            src="/img/customThemeBg.jpg"
                             alt="Kids playing on colorful playground"
-                            className="w-full max-w-2xl ml-auto"
+                            className="h-full max-h-[350px] aspect-[4/3] w-auto object-cover border-2 border-golden rounded-lg ml-auto"
                         />
                     </div>
                 </div>

@@ -6,7 +6,6 @@ import { AboutSection } from "@/components/sections/AboutSection"
 import { PlayDayPassesSection } from "@/components/sections/PlayDayPassesSection"
 import { BalloonGarlandsSection } from "@/components/sections/BalloonGarlandsSection"
 import { MembershipSection } from "@/components/sections/MembershipSection"
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection"
 
 export default function Index() {
   return (
@@ -43,12 +42,6 @@ export default function Index() {
 
       {/* Monthly Membership Section */}
       <MembershipSection />
-
-      {/* White Gap */}
-      <div className="bg-white h-2.5"></div>
-
-      {/* Testimonials Section */}
-      <TestimonialsSection />
 
       {/* White Gap */}
       <div className="bg-white h-2.5"></div>

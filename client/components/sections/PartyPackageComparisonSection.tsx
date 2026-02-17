@@ -53,7 +53,7 @@ export function PartyPackageComparisonSection() {
   ]
 
   return (
-    <section className="bg-[#54643D] py-12 md:py-16 lg:py-20 px-4 md:px-6">
+    <section className="bg-beige py-12 md:py-16 lg:py-20 px-4 md:px-6">
       <div className="max-w-[1400px] mx-auto">
         {/* Section Title */}
         <ScrollAnimation variant="fadeUp">
@@ -93,7 +93,7 @@ export function PartyPackageComparisonSection() {
 
         {/* Additional Information Section */}
         <ScrollAnimation variant="fadeUp" delay={0.2}>
-          <div className="bg-beige rounded-2xl p-6 md:p-8 lg:p-10 max-w-[900px] mx-auto border-2 border-olive shadow-lg">
+          <div className="bg-olive rounded-2xl p-6 md:p-8 lg:p-10 max-w-[900px] mx-auto border-2 border-brown shadow-lg">
             <h3 className="font-fredoka font-bold text-2xl md:text-3xl text-golden text-center mb-6 text-stroke-sm" style={{ WebkitTextStroke: "0.5px #56623C" }}>
               Additional Information
             </h3>
@@ -105,7 +105,7 @@ export function PartyPackageComparisonSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="bg-golden/20 rounded-lg py-3 px-4 md:px-6 border border-olive/20"
+                  className="bg-golden rounded-lg py-3 px-4 md:px-6 border border-olive/20"
                 >
                   <p className="text-[#333333] text-sm md:text-base font-medium text-center leading-relaxed">
                     {info}

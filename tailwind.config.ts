@@ -25,13 +25,14 @@ export default {
           dark: "#DBD4B6",
         },
         olive: {
-          DEFAULT: "#56623C",
-          dark: "#54643D",
-          light: "#606E43",
+          DEFAULT: "#639438",
         },
         golden: {
-          DEFAULT: "#FCBE5A",
-          light: "#FFBC56",
+          DEFAULT: "#F7D54F",
+          light: "#F7D54F",
+        },
+        brown: {
+          DEFAULT: "#5E2E1C",
         },
         cream: "#F5DFC3",
         primary: {

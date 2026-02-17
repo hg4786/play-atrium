@@ -11,7 +11,7 @@ export default function ImageGallery({ categoryImages }: { categoryImages: Recor
     const images = useMemo(() => categoryImages[activeCategory] || [], [activeCategory, categoryImages]);
 
     return (
-        <section className="bg-[#566336] py-8 px-4 font-sans">
+        <section className="bg-brown py-8 px-4 font-sans">
             <div className="">
 
                 <div 
@@ -40,7 +40,7 @@ export default function ImageGallery({ categoryImages }: { categoryImages: Recor
                                 <img
                                     src={src}
                                     alt={`Gallery item ${idx}`}
-                                    className={`w-full rounded-lg shadow-lg object-cover ${
+                                    className={`w-full border-2 border-beige shadow-lg object-cover ${
                                         // Randomize aspect ratios slightly to mimic the screenshot's masonry feel
                                         idx % 3 === 0 ? 'aspect-[3/4]' : 'aspect-square'
                                         }`}
@@ -61,7 +61,7 @@ export default function ImageGallery({ categoryImages }: { categoryImages: Recor
                         return (
                             <div
                                 key={`desk-${idx}`}
-                                className={`relative overflow-hidden rounded-xl shadow-xl group ${isWide ? 'col-span-2' : 'col-span-1'
+                                className={`relative overflow-hidden border-2 border-beige shadow-xl group ${isWide ? 'col-span-2' : 'col-span-1'
                                     }`}
                             >
                                 <img

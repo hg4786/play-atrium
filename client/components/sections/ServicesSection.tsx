@@ -17,7 +17,7 @@ export function ServicesSection() {
             <h2
               className="font-fredoka font-bold text-2xl md:text-5xl lg:text-[64px] text-[#FFBC56] text-center leading-normal tracking-[1.44px] lg:tracking-normal mb-3 md:mb-6"
               style={{
-                WebkitTextStroke: "3px #56623C",
+                WebkitTextStroke: "3px #5E2E1C",
                 WebkitTextStrokeWidth: window.innerWidth >= 768 ? "3px" : "1px",
               }}
             >

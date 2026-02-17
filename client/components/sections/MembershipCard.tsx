@@ -15,17 +15,17 @@ export function MembershipCard({
     <motion.div
       whileHover={{ scale: 1.05, rotate: 2 }}
       transition={{ duration: 0.4 }}
-      className="w-full max-w-[344px] lg:max-w-[565px] mx-auto aspect-square rounded-full border-[4px] lg:border-[5px] border-golden bg-[#54643D] shadow-lg p-12 lg:p-16 flex flex-col items-center justify-center text-center h-[565px]"
+      className="w-full max-w-[344px] lg:max-w-[565px] mx-auto aspect-square rounded-full border-[4px] lg:border-[5px] border-golden bg-olive shadow-lg p-12 lg:p-16 flex flex-col items-center justify-center text-center h-[565px]"
     >
       <div className="flex flex-col items-center space-y-6 max-w-[320px]">
         <div className="border-b border-[#DEB8A5] w-full space-y-3 lg:space-y-4">
           <h3
-            className="font-fredoka text-[20px] text-golden tracking-[2.16px]"
+            className="font-fredoka font-bold text-[20px] text-brown tracking-[2.16px]"
             style={{ WebkitTextStroke: "0.5px #F5EBD2" }}
           >
             {title}
           </h3>
-          <p className="font-fredoka text-[50px] text-golden" style={{ WebkitTextStroke: "1px #F5DFC3" }}>
+          <p className="font-fredoka text-[50px] text-golden" style={{ WebkitTextStroke: "1px #5E2E1C" }}>
             {price}
           </p>
         </div>
@@ -44,7 +44,7 @@ export function MembershipCard({
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}
-          className="bg-[#F5DFC3] text-[#657150] px-7 py-2 rounded-full font-poppins font-semibold text-md border border-[#A5AA9C] hover:bg-[#F5EBD2] transition-colors"
+          className="bg-golden text-olive px-7 py-2 rounded-full font-poppins font-semibold text-md border border-[#A5AA9C] hover:bg-[#F5EBD2] transition-colors"
         >
           Choose Plan
         </motion.button>

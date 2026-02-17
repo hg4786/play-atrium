@@ -10,13 +10,13 @@ export function Navbar() {
 
   return (
     <header className="bg-beige relative z-50 w-full">
-      <div className="flex items-center justify-between px-2.5 py-2.5 sm:px-6 sm:py-4 md:px-8 lg:px-14 lg:py-4">
+      <div className="flex items-center justify-between px-2.5 py-1 sm:px-6 sm:py-2 md:px-8 lg:px-14 lg:py-2">
         {/* Logo */}
         <Link to="/">
           <img
-            src="https://api.builder.io/api/v1/image/assets/TEMP/a8b59e56906e085d44896e9e9791b123bbf3c599?width=228"
+            src="/logo.svg"
             alt="Play Atrium Logo"
-            className="h-auto w-[114px] sm:w-24 md:w-28 lg:w-32 xl:w-40"
+            className="h-auto w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px]"
           />
         </Link>
 
@@ -29,16 +29,15 @@ export function Navbar() {
             <NavLink href="/contactus" isActive={pathname === "/contactus"}>Contact Us</NavLink>
             <NavLink href="/gallery" isActive={pathname === "/gallery"}>Gallery</NavLink>
           </div>
-          <div className="w-px h-16 bg-olive/20 mx-3"></div>
-          <button className="bg-[#54643D] text-beige px-6 py-2.5 rounded-full font-quicksand font-semibold text-sm tracking-[0.9px] hover:opacity-90 transition-opacity whitespace-nowrap">
-            BOOK NOW
+          <button className="bg-brown text-[#F4E9CD] px-6 py-2.5 rounded-full text-sm tracking-[0.9px] hover:opacity-90 transition-opacity whitespace-nowrap">
+            Become a Member
           </button>
         </nav>
 
-        {/* Mobile Menu Button & Book Now */}
+        {/* Mobile Menu Button & become a member */}
         <div className="flex lg:hidden items-center gap-2">
-          <button className="bg-[#54643D] text-beige px-[19px] py-2.5 rounded-full font-quicksand font-semibold text-[10px] tracking-[0.9px] hover:opacity-90 transition-opacity whitespace-nowrap">
-            BOOK NOW
+          <button className="bg-brown text-[#F4E9CD] px-[19px] py-1.5 rounded-full text-[10px] tracking-[0.9px] hover:opacity-90 transition-opacity whitespace-nowrap">
+            Become a Member
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -70,40 +69,40 @@ export function Navbar() {
             <Link
               to="/parties-events"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #56623C" }}
+              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #5E2E1C" }}
             >
               Parties & Events
             </Link>
             <Link
               to="/aboutus"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #56623C" }}
+              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #5E2E1C" }}
             >
               About Us
             </Link>
             <Link
               to="/custom-decorations"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #56623C" }}
+              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #5E2E1C" }}
             >
               Custom Decoration
             </Link>
             <Link
               to="/contactus"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #56623C" }}
+              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #5E2E1C" }}
             >
               Contact Us
             </Link>
             <Link
               to="/gallery"
               onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-beige text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #56623C" }}
+              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+              style={{ WebkitTextStroke: "1px #5E2E1C" }}
             >
               Gallery
             </Link>
@@ -126,9 +125,11 @@ function NavLink({
   return (
     <Link
       to={href}
-      className={"font-fredoka font-extrabold text-xl text-center px-3.5 hover:opacity-80 transition-opacity whitespace-nowrap border-b-2" + (isActive ? " text-[#FFBC56] border-olive" : " text-beige border-beige")}
+      className={`font-fredoka font-bold text-xl text-center px-3.5 hover:opacity-80 transition-opacity whitespace-nowrap ${
+        isActive ? "text-golden underline underline-offset-8 decoration-2" : "text-transparent"
+      }`}
       style={{
-        WebkitTextStroke: "1px #56623C",
+        WebkitTextStroke: "1px #5E2E1C",
       }}
     >
       {children}

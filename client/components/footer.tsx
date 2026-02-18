@@ -5,7 +5,7 @@ export function Footer() {
     return (
         <footer id="contact" className="bg-olive py-12 md:py-16 px-6">
             <div className="max-w-7xl mx-auto">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
                     <ScrollAnimation variant="scale" delay={0.1}>
                         <div className="flex flex-col items-center space-y-6">
                             <img
@@ -24,7 +24,7 @@ export function Footer() {
                             <h4 className="font-poppins text-beige text-lg md:text-3xl">
                                 Hours
                             </h4>
-                            <div className="text-beige text-base md:text-lg space-y-1">
+                            <div className="text-beige text-base md:text-md space-y-1">
                                 <p>Monday - Friday : 10:00 am - 6:00 pm</p>
                                 <p>Saturday : 9:00 Am - 6:00 Pm</p>
                                 <p>Sunday : 10:00 AM - 5:00 PM</p>

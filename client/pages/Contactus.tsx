@@ -2,6 +2,7 @@
 
 import { HeaderImage } from "@/components/HeaderImage"
 import { CustomTheme } from "@/components/sections/CustomTheme"
+import { FAQSection } from "@/components/sections/FAQSection"
 
 export default function ContactUs() {
   return (
@@ -68,7 +69,7 @@ export default function ContactUs() {
               {/* Map */}
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.123456789!2d-95.123456!3d29.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDA3JzI0LjQiTiA5NcKwMDcnMjQuNCJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.7446648865675!2d-95.46094889999999!3d29.8139202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c68a15ae6745%3A0x2732b49113a3b5a!2s10640%20Northwest%20Fwy%2C%20Houston%2C%20TX%2077092%2C%20USA!5e0!3m2!1sen!2sin!4v1771412770511!5m2!1sen!2sin"
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
@@ -269,11 +270,12 @@ export default function ContactUs() {
         </div>
       </div>
 
-      {/* White Gap */}
-      <div className="bg-white h-2.5"></div>
-
       {/* Custom Themes Section */}
       <CustomTheme />
+
+      {/* FAQ Section */}
+      <FAQSection />
+
     </>
   )
 }

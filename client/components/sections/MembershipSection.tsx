@@ -55,6 +55,7 @@ export function MembershipSection() {
                     "Early access to events & specials",
                   ]}
                   note="Best Value for frequent players and weekend families"
+                  isPopular
                 />
               </CarouselItem>
             </CarouselContent>
@@ -86,6 +87,7 @@ export function MembershipSection() {
                 "Early access to events & specials",
               ]}
               note="Best Value for frequent players and weekend families"
+              isPopular
             />
           </ScrollAnimation>
         </div>

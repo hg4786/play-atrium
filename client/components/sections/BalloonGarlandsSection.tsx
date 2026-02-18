@@ -14,13 +14,13 @@ const columns = [
       {
         name: "CUSTOM BACKDROP + 6FT BALLOONS",
         price: "$300",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Ff6464ae0a97c45b597577376c5ab2661%2F426003cf3f2d443a805855692c625afd?format=webp&width=800",
+        image: "/img/custombackdropBg-01.png",
         imagePosition: "left"
       },
       {
         name: "CUSTOM BACKDROP + 12FT BALLOONS",
         price: "$380",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Ff6464ae0a97c45b597577376c5ab2661%2Faaefdb345315400a825fa6ccab9c2fb5?format=webp&width=800",
+        image: "/img/custombackdropBg-02.png",
         imagePosition: "right"
       }
     ],
@@ -35,13 +35,13 @@ const columns = [
       {
         name: "COLOR BACKDROP + 6FT BALLOONS",
         price: "$200",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Ff6464ae0a97c45b597577376c5ab2661%2F046f6462f03d4cabbe5d00d89de609dd?format=webp&width=800",
+        image: "/img/custombackdropBg-03.png",
         imagePosition: "left"
       },
       {
         name: "1 COLOR BACKDROP + 12FT BALLOONS",
         price: "$280",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Ff6464ae0a97c45b597577376c5ab2661%2F94305455275840f6a07d944b375a3a9a?format=webp&width=800",
+        image: "/img/custombackdropBg-04.png",
         imagePosition: "right"
       }
     ],
@@ -56,13 +56,13 @@ const columns = [
       {
         name: "1 COLOR BACKDROP + 6FT BALLOONS",
         price: "$200",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Ff6464ae0a97c45b597577376c5ab2661%2F046f6462f03d4cabbe5d00d89de609dd?format=webp&width=800",
+        image: "/img/custombackdropBg-03.png",
         imagePosition: "left"
       },
       {
         name: "1 COLOR BACKDROP + 12FT BALLOONS",
         price: "$280",
-        image: "https://cdn.builder.io/api/v1/image/assets%2Ff6464ae0a97c45b597577376c5ab2661%2F94305455275840f6a07d944b375a3a9a?format=webp&width=800",
+        image: "/img/custombackdropBg-04.png",
         imagePosition: "right"
       }
     ],
@@ -117,14 +117,14 @@ export function BalloonGarlandsSection() {
                 <BalloonGarlandCard
                   size="CUSTOM BACKDROP + 6FT BALLOONS"
                   price="$300"
-                  image="https://cdn.builder.io/api/v1/image/assets%2Ff6464ae0a97c45b597577376c5ab2661%2F046f6462f03d4cabbe5d00d89de609dd?format=webp&width=800"
+                  image="/img/custombackdropBg-01.png"
                 />
               </CarouselItem>
               <CarouselItem className="pl-0">
                 <BalloonGarlandCard
                   size="12-Foot Garland"
                   price="$180"
-                  image="https://cdn.builder.io/api/v1/image/assets%2Ff6464ae0a97c45b597577376c5ab2661%2F426003cf3f2d443a805855692c625afd?format=webp&width=800"
+                  image="/img/custombackdropBg-04.png"
                 />
               </CarouselItem>
             </CarouselContent>

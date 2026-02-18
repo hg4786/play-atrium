@@ -5,22 +5,25 @@ export function MembershipCard({
   price,
   features,
   note,
+  isPopular = false
 }: {
   title: string
   price: string
   features: string[]
   note: string
+  isPopular?: boolean
 }) {
   return (
     <motion.div
       whileHover={{ scale: 1.05, rotate: 2 }}
       transition={{ duration: 0.4 }}
-      className="w-full max-w-[344px] lg:max-w-[565px] mx-auto aspect-square rounded-full border-[4px] lg:border-[5px] border-golden bg-olive shadow-lg p-12 lg:p-16 flex flex-col items-center justify-center text-center h-[565px]"
+      className="relative w-full max-w-[344px] lg:max-w-[565px] mx-auto aspect-square rounded-full border-[4px] lg:border-[5px] border-golden bg-olive shadow-lg p-12 lg:p-16 flex flex-col items-center justify-center text-center h-[565px]"
     >
+      {isPopular && <img className="absolute -top-3 right-1/2 translate-x-1/2 w-32" src="/img/popularBadge.png" alt="" />}
       <div className="flex flex-col items-center space-y-6 max-w-[320px]">
         <div className="border-b border-[#DEB8A5] w-full space-y-3 lg:space-y-4">
           <h3
-            className="font-fredoka font-bold text-[20px] text-brown tracking-[2.16px]"
+            className="font-fredoka font-bold text-[35px] text-brown tracking-[2.16px]"
             style={{ WebkitTextStroke: "0.5px #F5EBD2" }}
           >
             {title}

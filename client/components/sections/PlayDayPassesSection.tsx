@@ -17,12 +17,12 @@ export function PlayDayPassesSection() {
                 OPEN PLAY
               </p>
               <h2
-                className="font-fredoka font-bold text-3xl text-golden tracking-normal text-center"
+                className="font-fredoka font-bold text-2xl text-golden tracking-normal text-center"
                 style={{ WebkitTextStroke: "0.5px #5E2E1C" }}
               >
                 Play Day Passes
               </h2>
-              <p className="text-[#333333] text-sm font-light leading-normal text-center max-w-[372px] mx-auto">
+              <p className="text-[#333333] text-sm font-light leading-normal text-center max-w-[350px] mx-auto">
                 Bring your kids to explore 2,000 sq ft of safe, exciting play zones. Perfect for playdates, rainy days, or spontaneous adventures.
               </p>
             </div>
@@ -88,7 +88,7 @@ export function PlayDayPassesSection() {
                   className="aspect-square rounded-full overflow-hidden border-[9px] border-beige"
                 >
                   <img
-                    src="https://api.builder.io/api/v1/image/assets/TEMP/f3f725645dd8f97dc7c73020a6adca7024c2ca90?width=960"
+                    src="/img/socks.jpg"
                     alt="Socks required"
                     className="w-full h-full object-cover"
                   />
@@ -115,14 +115,14 @@ export function PlayDayPassesSection() {
                 <p className="text-olive text-lg md:text-xl font-medium">
                   OPEN PLAY
                 </p>
-                <h2 className="font-fredoka text-4xl sm:text-5xl md:text-6xl lg:text-[80.9px] text-golden tracking-[0.06em] text-stroke-md leading-tight"
+                <h2 className="font-fredoka text-3xl sm:text-4xl md:text-5xl lg:text-[60px] text-golden tracking-[0.06em] text-stroke-md leading-tight"
                   style={{
                     WebkitTextStroke: "4px #5E2E1C",
                   }}
                 >
                   Play Day Passes
                 </h2>
-                <p className="text-[#333333] text-lg md:text-xl font-light leading-[35px] max-w-[800px]">
+                <p className="text-[#333333] text-md md:text-lg font-light leading-[35px] max-w-[800px]">
                   Bring your kids to explore 2,000 sq ft of safe, exciting play zones. Perfect for playdates, rainy days, or spontaneous adventures.
                 </p>
               </div>

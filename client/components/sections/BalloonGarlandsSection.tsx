@@ -177,20 +177,6 @@ export function BalloonGarlandsSection() {
                   make decorating easy!
                 </p>
               </div>
-              {/* <motion.img
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                animate={{ y: [0, -10, 0] }}
-                viewport={{ once: true }}
-                transition={{
-                  opacity: { duration: 0.8 },
-                  y: { duration: 3, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }
-                }}
-                src="https://api.builder.io/api/v1/image/assets/TEMP/fd32ed87d5b4e413be0746ae8df3e000299989de?width=2078"
-                alt="Decorative balloons"
-                className="absolute bottom-0 left-0 w-full h-[250px] object-contain"
-                style={{ transform: "rotate(2.982deg)" }}
-              /> */}
             </div>
           </ScrollAnimation>
 
@@ -204,13 +190,13 @@ export function BalloonGarlandsSection() {
             <div className="flex gap-[13px]">
               {columns.map((column, colIndex) => (
                 <ScrollAnimation key={colIndex} variant={column.animation as any} delay={column.delay}>
-                  <div className="w-[450px] min-h-[650px] bg-golden flex flex-col p-4 flex-shrink-0">
+                  <div className="w-[420px] lg:w-[450px] min-h-[650px] bg-golden flex flex-col py-8 px-5 lg:px-8 flex-shrink-0">
                     {/* Title at Top */}
                     {column.titlePosition === "top" && (
-                      <div className="py-2 flex-shrink-0">
+                      <div className="mb-6 flex-shrink-0">
                         <h3
-                          className="font-fredoka text-[36px] text-beige text-center tracking-0 leading-tight"
-                          style={{ WebkitTextStroke: "4px #5E2E1C" }}
+                          className="font-fredoka text-[32px] lg:text-[40px] text-beige text-center tracking-tight leading-tight"
+                          style={{ WebkitTextStroke: "3px #5E2E1C" }}
                         >
                           {column.title}
                         </h3>
@@ -218,49 +204,40 @@ export function BalloonGarlandsSection() {
                     )}
 
                     {/* Items */}
-                    <div className={`flex flex-col gap-4 ${column.titlePosition === "bottom" ? "flex-1" : ""}`}>
+                    <div className="flex-1 flex flex-col justify-around">
                       {column.items.map((item, itemIndex) => (
-                        <div key={itemIndex} className="flex items-center gap-4">
-                          {/* Image Left */}
-                          {item.imagePosition === "left" && (
+                        <div key={itemIndex} className={`flex items-center gap-4 ${item.imagePosition === "right" ? "flex-row-reverse text-right" : "text-left"}`}>
+                          {/* Image */}
+                          <div className="w-[180px] lg:w-[210px] flex-shrink-0">
                             <img
                               src={item.image}
                               alt={item.name}
-                              className="w-[180px] h-auto flex-shrink-0"
+                              className="w-full h-full object-contain"
                             />
-                          )}
+                          </div>
 
                           {/* Details */}
-                          <div className="flex flex-col gap-2">
-                            <p className={`text-black font-inter leading-tight ${column.title.includes("CUSTOM") ? "text-sm" : "text-xs max-w-[120px]"}`}>
+                          <div className={`flex flex-col gap-2 flex-1 ${item.imagePosition === "right" ? "items-end" : "items-start"}`}>
+                            <p className="text-black font-inter font-medium leading-tight text-xs lg:text-sm">
                               {item.name}
                             </p>
                             <p
-                              className="font-poppins text-[24px] text-beige font-bold"
+                              className="font-poppins text-[24px] lg:text-[32px] text-beige font-bold"
                               style={{ WebkitTextStroke: "2px #5E2E1C" }}
                             >
                               {item.price}
                             </p>
-                            <button className="w-[90px] py-1 text-xs bg-brown text-beige rounded-full font-inter font-semibold tracking-[0.9px] hover:bg-olive transition-colors shadow-md">
+                            <button className="w-fit px-4 lg:px-6 py-1.5 text-[10px] lg:text-xs bg-brown text-beige rounded-full font-inter font-semibold tracking-wide hover:bg-olive transition-colors shadow-md">
                               BOOK NOW
                             </button>
                           </div>
-
-                          {/* Image Right */}
-                          {item.imagePosition === "right" && (
-                            <img
-                              src={item.image}
-                              alt={item.name}
-                              className="w-[180px] h-auto flex-shrink-0"
-                            />
-                          )}
                         </div>
                       ))}
 
                       {/* Custom colors note */}
                       {column.showCustomNote && (
-                        <div className="bg-gradient-to-r from-beige/40 via-[rgba(255,197,2,0.39)] to-beige/40 p-2 text-center">
-                          <p className="text-black text-xs font-inter">
+                        <div className="bg-gradient-to-r from-beige/40 via-[rgba(255,197,2,0.39)] to-beige/40 p-2 text-center rounded-lg">
+                          <p className="text-black text-[10px] lg:text-xs font-inter">
                             Custom colors & themes available
                           </p>
                         </div>
@@ -269,10 +246,10 @@ export function BalloonGarlandsSection() {
 
                     {/* Title at Bottom */}
                     {column.titlePosition === "bottom" && (
-                      <div className="py-2 flex-shrink-0">
+                      <div className="mt-6 flex-shrink-0">
                         <h3
-                          className="font-fredoka text-[36px] text-beige text-center tracking-[2.574px] leading-tight"
-                          style={{ WebkitTextStroke: "4px #5E2E1C" }}
+                          className="font-fredoka text-[32px] lg:text-[40px] text-beige text-center tracking-tight leading-tight"
+                          style={{ WebkitTextStroke: "3px #5E2E1C" }}
                         >
                           {column.title}
                         </h3>

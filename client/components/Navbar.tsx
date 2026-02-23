@@ -10,13 +10,13 @@ export function Navbar() {
 
   return (
     <header className="bg-beige relative z-50 w-full">
-      <div className="flex items-center justify-between px-2.5 py-1 sm:px-6 sm:py-2 md:px-8 lg:px-14 lg:py-2">
+      <div className="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 md:px-8 lg:px-14 lg:py-4">
         {/* Logo */}
         <Link to="/">
           <img
             src="/logo.svg"
             alt="Play Atrium Logo"
-            className="h-auto w-[120px] sm:w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px]"
+            className="h-auto w-[140px] sm:w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px]"
           />
         </Link>
 
@@ -36,7 +36,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button & become a member */}
         <div className="flex lg:hidden items-center gap-2">
-          <button className="bg-brown text-[#F4E9CD] px-[19px] py-1.5 rounded-full text-[10px] tracking-[0.9px] hover:opacity-90 transition-opacity whitespace-nowrap">
+          <button className="bg-brown text-[#F4E9CD] px-5 py-2.5 rounded-full text-xs tracking-[0.9px] hover:opacity-90 transition-opacity whitespace-nowrap">
             Become a Member
           </button>
           <button

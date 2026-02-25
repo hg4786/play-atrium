@@ -3,6 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import { Link, useLocation } from "react-router-dom"
+import { siteConfig } from "@/lib/site-config"
 
 export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -14,8 +15,8 @@ export function Navbar() {
         {/* Logo */}
         <Link to="/">
           <img
-            src="/logo.svg"
-            alt="Play Atrium Logo"
+            src={siteConfig.logoColor}
+            alt={`${siteConfig.name} Logo`}
             className="h-auto w-[140px] sm:w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px]"
           />
         </Link>
@@ -23,21 +24,21 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center ml-auto">
           <div className="flex items-center gap-2">
-            <NavLink href="/parties-events" isActive={pathname === "/parties-events"}>Parties & Events</NavLink>
-            <NavLink href="/aboutus" isActive={pathname === "/aboutus"}>About Us</NavLink>
-            <NavLink href="/custom-decorations" isActive={pathname === "/custom-decorations"}>Custom Decoration</NavLink>
-            <NavLink href="/contactus" isActive={pathname === "/contactus"}>Contact Us</NavLink>
-            <NavLink href="/gallery" isActive={pathname === "/gallery"}>Gallery</NavLink>
+            {siteConfig.navLinks.map((link) => (
+              <NavLink key={link.href} href={link.href} isActive={pathname === link.href}>
+                {link.label}
+              </NavLink>
+            ))}
           </div>
           <button className="bg-brown text-[#F4E9CD] px-6 py-2.5 rounded-full text-sm tracking-[0.9px] hover:opacity-90 transition-opacity whitespace-nowrap">
-            Become a Member
+            <a href={siteConfig.becomeMemberLink}>Become a Member</a>
           </button>
         </nav>
 
         {/* Mobile Menu Button & become a member */}
         <div className="flex lg:hidden items-center gap-2">
           <button className="bg-brown text-[#F4E9CD] px-5 py-2.5 rounded-full text-xs tracking-[0.9px] hover:opacity-90 transition-opacity whitespace-nowrap">
-            Become a Member
+            <a href={siteConfig.becomeMemberLink}>Become a Member</a>
           </button>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -66,46 +67,17 @@ export function Navbar() {
       {mobileMenuOpen && (
         <div className="lg:hidden bg-beige border-t-2 border-olive/10 py-4 px-4">
           <nav className="flex flex-col gap-4">
-            <Link
-              to="/parties-events"
-              onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #5E2E1C" }}
-            >
-              Parties & Events
-            </Link>
-            <Link
-              to="/aboutus"
-              onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #5E2E1C" }}
-            >
-              About Us
-            </Link>
-            <Link
-              to="/custom-decorations"
-              onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #5E2E1C" }}
-            >
-              Custom Decoration
-            </Link>
-            <Link
-              to="/contactus"
-              onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #5E2E1C" }}
-            >
-              Contact Us
-            </Link>
-            <Link
-              to="/gallery"
-              onClick={() => setMobileMenuOpen(false)}
-              className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
-              style={{ WebkitTextStroke: "1px #5E2E1C" }}
-            >
-              Gallery
-            </Link>
+            {siteConfig.navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="font-fredoka font-bold text-xl text-transparent text-center tracking-[1.44px] hover:opacity-80 transition-opacity py-2"
+                style={{ WebkitTextStroke: "1px #5E2E1C" }}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
         </div>
       )}

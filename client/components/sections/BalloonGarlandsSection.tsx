@@ -62,7 +62,7 @@ const columns = [
       {
         name: "1 COLOR BACKDROP + 12FT BALLOONS",
         price: "$280",
-        image: "/img/custombackdropBg-04.png",
+        image: "/img/custombackdropBg-06.png",
         imagePosition: "right"
       }
     ],
@@ -212,7 +212,8 @@ export function BalloonGarlandsSection() {
                             <img
                               src={item.image}
                               alt={item.name}
-                              className="w-full h-full object-contain"
+                              className="w-full h-full object-contain select-none"
+                              draggable={false}
                             />
                           </div>
 

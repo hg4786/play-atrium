@@ -16,7 +16,7 @@ export function BalloonGarlandCard({
       className="w-full max-w-[402px] mx-auto bg-golden p-6"
     >
       <div className="flex flex-col items-center gap-6">
-        <img src={image || "/placeholder.svg"} alt={size} className="w-[190px] h-auto" />
+        <img src={image || "/placeholder.svg"} alt={size} className="w-[190px] h-auto select-none" draggable={false} />
         <div className="flex flex-col items-center space-y-4">
           <p className="text-black text-xl">{size}</p>
           <p className="font-poppins text-[36px] text-beige font-bold" style={{ WebkitTextStroke: "3px #5E2E1C" }}>

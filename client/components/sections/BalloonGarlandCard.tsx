@@ -17,7 +17,7 @@ export function BalloonGarlandCard(props: Props) {
     <motion.div
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.3 }}
-      className="w-[420px] lg:w-[450px] min-h-[650px] bg-golden flex flex-col py-8 px-5 lg:px-8 flex-shrink-0"
+      className="w-full md:w-[420px] lg:w-[450px] mx-auto min-h-[550px] md:min-h-[650px] bg-golden flex flex-col py-8 px-5 lg:px-8 flex-shrink-0"
     >
       {/* Title at Top */}
       {props.titlePosition === "top" && (

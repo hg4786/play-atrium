@@ -1,8 +1,11 @@
 import { ScrollAnimation } from "@/lib/animationUtils"
 import { DecorativeStars } from "./DecorativeStars"
 import { ServiceCard } from "./ServiceCard"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 export function ServicesSection() {
+  const isMobile = useIsMobile();
+
   return (
     <section
       id="services"
@@ -18,7 +21,7 @@ export function ServicesSection() {
               className="font-fredoka font-bold text-2xl md:text-5xl lg:text-[64px] text-[#FFBC56] text-center leading-normal tracking-[1.44px] lg:tracking-normal mb-3 md:mb-6"
               style={{
                 WebkitTextStroke: "3px #5E2E1C",
-                WebkitTextStrokeWidth: window.innerWidth >= 768 ? "3px" : "1px",
+                WebkitTextStrokeWidth: isMobile ? "1px" : "3px",
               }}
             >
               Our Awesome Services For

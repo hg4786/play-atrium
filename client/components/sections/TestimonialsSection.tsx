@@ -67,7 +67,7 @@ export function TestimonialsSection() {
                 What Parents Are Saying
               </h2>
               <p className="text-white text-sm leading-7">
-                Real Experiences From Families Who Love The Play Atrium
+                Real Experiences From Families Who Love The Lanky Land
               </p>
             </div>
           </ScrollAnimation>
@@ -140,7 +140,7 @@ export function TestimonialsSection() {
                   What Parents Are Saying
                 </h2>
                 <p className="text-white text-lg leading-[35px] font-inter">
-                  Real Experiences From Families Who Love The Play Atrium
+                  Real Experiences From Families Who Love The Lanky Land
                 </p>
               </div>
 

@@ -1,7 +1,7 @@
 import { icons } from "./icons";
 
 export const siteConfig = {
-  name: "Play Atrium",
+  name: "Lanky Land",
   tagline: "Where families play, connect, and celebrate together.",
   logoWhite: "/logo-white.png",
   logoColor: "/logo.svg",
@@ -19,8 +19,8 @@ export const siteConfig = {
     ]
   },
   hours: [
-    { label: "Monday - Friday", time: "10:00 am - 6:00 pm" },
-    { label: "Saturday", time: "9:00 Am - 6:00 Pm" },
+    { label: "Monday - Friday", time: "10:00 AM - 6:00 PM" },
+    { label: "Saturday", time: "9:00 AM - 6:00 PM" },
     { label: "Sunday", time: "11:00 AM - 5:00 PM" },
   ],
   hoursNote: "* Full Facility Rental Available",

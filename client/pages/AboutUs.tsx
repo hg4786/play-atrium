@@ -48,7 +48,7 @@ export default function AboutUs() {
           {/* Description Text */}
           <div className="text-beige text-center lg:text-left max-w-3xl mx-auto lg:mx-0 mb-12 space-y-4">
             <p className="text-sm md:text-base leading-relaxed">
-              We created The Play Atrium as a place where kids can play freely, explore confidently, and just be kids — while parents feel comfortable, relaxed, and welcome.
+              We created The Lanky Land as a place where kids can play freely, explore confidently, and just be kids — while parents feel comfortable, relaxed, and welcome.
             </p>
             <p className="text-sm md:text-base leading-relaxed">
               Our space was thoughtfully designed with families in mind, offering a clean, safe, and engaging environment that encourages imagination, movement, and connection.

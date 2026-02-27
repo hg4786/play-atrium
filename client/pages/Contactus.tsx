@@ -3,6 +3,7 @@
 import { HeaderImage } from "@/components/HeaderImage"
 import { CustomTheme } from "@/components/sections/CustomTheme"
 import { FAQSection } from "@/components/sections/FAQSection"
+import { siteConfig } from "@/lib/site-config"
 
 export default function ContactUs() {
   return (
@@ -44,15 +45,21 @@ export default function ContactUs() {
                 <div>
                   <h3 className="font-poppins font-semibold text-brown mb-2">Address</h3>
                   <p className="text-[#56623c] text-sm">
-                    10640 Northwest Fwy,<br />
-                    Houston, TX 77092
+                    {siteConfig.contact.addressLine1},<br />
+                    {siteConfig.contact.addressLine2}
                   </p>
                 </div>
                 <div>
                   <h3 className="font-poppins font-semibold text-brown mb-2">Email & Phone</h3>
                   <p className="text-[#56623c] text-sm">
-                    Email: ambient@example.com<br />
-                    Phone: +88 (0) 101 0000 000
+                    {siteConfig.contact.emails.map((email, index) => (
+                      <span key={index}>
+                        Email: <a href={`mailto:${email}`} className="hover:underline">{email}</a>
+                        {index < siteConfig.contact.emails.length - 1 && <br />}
+                      </span>
+                    ))}
+                    {siteConfig.contact.emails.length > 0 && siteConfig.contact.phone && <br />}
+                    {siteConfig.contact.phone && <>Phone: <a href={`tel:${siteConfig.contact.phone}`} className="hover:underline">{siteConfig.contact.phone}</a></>}
                   </p>
                 </div>
               </div>
@@ -60,16 +67,19 @@ export default function ContactUs() {
               <div className="mb-8">
                 <h3 className="font-poppins font-semibold text-brown mb-2">Hours Of Operations</h3>
                 <p className="text-[#56623c] text-sm">
-                  Monday - Friday : 10:00 am - 6:00 pm<br />
-                  Saturday : 9:00 Am - 6:00 Pm<br />
-                  Sunday : 10:00 AM - 5:00 PM
+                  {siteConfig.hours.map((hour, index) => (
+                    <span key={index}>
+                      {hour.label} : {hour.time}
+                      {index < siteConfig.hours.length - 1 && <br />}
+                    </span>
+                  ))}
                 </p>
               </div>
 
               {/* Map */}
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3461.7446648865675!2d-95.46094889999999!3d29.8139202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c68a15ae6745%3A0x2732b49113a3b5a!2s10640%20Northwest%20Fwy%2C%20Houston%2C%20TX%2077092%2C%20USA!5e0!3m2!1sen!2sin!4v1771412770511!5m2!1sen!2sin"
+                  src={siteConfig.contact.googleMapsEmbedUrl}
                   width="100%"
                   height="300"
                   style={{ border: 0 }}
@@ -125,12 +135,12 @@ export default function ContactUs() {
                     backgroundPosition: 'right 1.5rem center',
                   }}
                 >
-                  <option value="">Select Reason</option>
-                  <option value="open-play">Open Play</option>
-                  <option value="membership">Membership</option>
-                  <option value="birthday-party">Birthday Party</option>
-                  <option value="private-event">Private Event</option>
-                  <option value="other">Other</option>
+                  <option value="" className="bg-brown text-white">Select Reason</option>
+                  <option value="open-play" className="bg-brown text-white">Open Play</option>
+                  <option value="membership" className="bg-brown text-white">Membership</option>
+                  <option value="birthday-party" className="bg-brown text-white">Birthday Party</option>
+                  <option value="private-event" className="bg-brown text-white">Private Event</option>
+                  <option value="other" className="bg-brown text-white">Other</option>
                 </select>
                 <textarea
                   placeholder="Message"
@@ -204,12 +214,12 @@ export default function ContactUs() {
                     backgroundPosition: 'right 1.5rem center',
                   }}
                 >
-                  <option value="">Select Reason</option>
-                  <option value="open-play">Open Play</option>
-                  <option value="membership">Membership</option>
-                  <option value="birthday-party">Birthday Party</option>
-                  <option value="private-event">Private Event</option>
-                  <option value="other">Other</option>
+                  <option value="" className="bg-brown text-white">Select Reason</option>
+                  <option value="open-play" className="bg-brown text-white">Open Play</option>
+                  <option value="membership" className="bg-brown text-white">Membership</option>
+                  <option value="birthday-party" className="bg-brown text-white">Birthday Party</option>
+                  <option value="private-event" className="bg-brown text-white">Private Event</option>
+                  <option value="other" className="bg-brown text-white">Other</option>
                 </select>
                 <textarea
                   placeholder="Message"
@@ -232,23 +242,32 @@ export default function ContactUs() {
                 <div>
                   <h3 className="font-poppins font-semibold text-brown mb-2">Address</h3>
                   <p className="text-sm">
-                    10640 Northwest Fwy,<br />
-                    Houston, TX 77092
+                    {siteConfig.contact.addressLine1},<br />
+                    {siteConfig.contact.addressLine2}
                   </p>
                 </div>
                 <div>
                   <h3 className="font-poppins font-semibold text-brown mb-2">Email & Phone</h3>
                   <p className="text-sm">
-                    Email: ambient@example.com<br />
-                    Phone: +88 (0) 101 0000 000
+                    {siteConfig.contact.emails.map((email, index) => (
+                      <span key={index}>
+                        Email: <a href={`mailto:${email}`} className="hover:underline">{email}</a>
+                        {index < siteConfig.contact.emails.length - 1 && <br />}
+                      </span>
+                    ))}
+                    {siteConfig.contact.emails.length > 0 && siteConfig.contact.phone && <br />}
+                    {siteConfig.contact.phone && <>Phone: <a href={`tel:${siteConfig.contact.phone}`} className="hover:underline">{siteConfig.contact.phone}</a></>}
                   </p>
                 </div>
                 <div>
                   <h3 className="font-poppins font-semibold text-brown mb-2">Hours Of Operations</h3>
                   <p className="text-sm">
-                    Monday - Friday : 10:00 am - 6:00 pm<br />
-                    Saturday : 9:00 Am - 6:00 Pm<br />
-                    Sunday : 10:00 AM - 5:00 PM
+                    {siteConfig.hours.map((hour, index) => (
+                      <span key={index}>
+                        {hour.label} : {hour.time}
+                        {index < siteConfig.hours.length - 1 && <br />}
+                      </span>
+                    ))}
                   </p>
                 </div>
               </div>
@@ -256,7 +275,7 @@ export default function ContactUs() {
               {/* Map */}
               <div className="rounded-lg overflow-hidden shadow-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3458.123456789!2d-95.123456!3d29.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjnCsDA3JzI0LjQiTiA5NcKwMDcnMjQuNCJX!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                  src={siteConfig.contact.googleMapsEmbedUrl}
                   width="100%"
                   height="250"
                   style={{ border: 0 }}

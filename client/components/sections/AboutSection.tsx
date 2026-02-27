@@ -63,7 +63,7 @@ export function AboutSection() {
 
               <div className="space-y-8">
                 <p className="text-white text-center text-base md:text-md font-light leading-relaxed opacity-90">
-                  The Play Atrium was created with one goal in mind: to give families a safe, clean, and joyful place to play, connect, and celebrate together. Located inside a 4,000 sq ft family-friendly facility, featuring approximately 2,000 sq ft of dedicated play areas designed for exploration, creativity, and active fun. we’re dedicated to making every visit feel special.
+                  The Lanky Land was created with one goal in mind: to give families a safe, clean, and joyful place to play, connect, and celebrate together. Located inside a 4,000 sq ft family-friendly facility, featuring approximately 2,000 sq ft of dedicated play areas designed for exploration, creativity, and active fun. we’re dedicated to making every visit feel special.
                 </p>
 
                 <p className="text-white text-center text-base md:text-md font-light leading-relaxed opacity-90">

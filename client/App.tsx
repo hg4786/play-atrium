@@ -6,6 +6,10 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ComingSoon from "./pages/ComingSoon";
+
+// Temporarily disabling other pages
+/*
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import PartiesAndEvents from "./pages/PartiesAndEvents";
@@ -14,6 +18,7 @@ import AboutUs from "./pages/AboutUs";
 import Layout from "./Layout";
 import Gallery from "./pages/Gallery";
 import CustomDecorations from "./pages/CustomDecorations";
+*/
 
 const queryClient = new QueryClient();
 
@@ -23,6 +28,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        {/*
         <Layout>
           <Routes>
             <Route path="/" element={<Index />} />
@@ -31,10 +37,13 @@ const App = () => (
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/custom-decorations" element={<CustomDecorations />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
+        */}
+        <Routes>
+          <Route path="*" element={<ComingSoon />} />
+        </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
